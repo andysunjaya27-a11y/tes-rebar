@@ -9,51 +9,67 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{min-height:100vh;background:#F5F8FE;color:#1A2B4A;font-family:'Segoe UI',Arial,sans-serif;display:flex;flex-direction:column;font-size:13px}
 :root{--b1:#1958A5;--b3:#E8F0FB;--b4:#C8DBF5;--b5:#F0F6FF;--g1:#F5F8FE;--g2:#EEF3FB;--g3:#6B82A0;--g4:#94A8C0;--dark:#1A2B4A;--red:#DC2626;--green:#16A34A;--amber:#D97706}
-#hdr{background:#fff;border-bottom:1px solid var(--b4);padding:0 20px;display:flex;align-items:center;gap:10px;height:52px;flex-shrink:0;box-shadow:0 1px 4px #1958A512}
+
+/* HEADER */
+#hdr{background:#fff;border-bottom:1px solid var(--b4);padding:0 20px;display:flex;align-items:center;gap:10px;height:52px;flex-shrink:0}
 #hdr img{height:34px;object-fit:contain}
 .hdiv{border-left:1px solid var(--b4);height:28px}
-#ht{font-size:13px;font-weight:700;color:var(--dark)}
-#hs{font-size:10px;color:var(--g3)}
-#hu{margin-left:auto;display:flex;align-items:center;gap:10px;font-size:11px;color:var(--g3)}
+#ht{font-size:13px;font-weight:700;color:var(--dark)}#hs{font-size:10px;color:var(--g3)}
+#hu{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:11px;color:var(--g3)}
 .badge{padding:2px 9px;border-radius:20px;background:var(--b3);color:var(--b1);font-size:11px;font-weight:700}
+
+/* LAYOUT */
 #main{display:flex;flex:1;overflow:hidden}
 #side{width:190px;background:#fff;border-right:1px solid var(--b4);padding:14px 0;flex-shrink:0;overflow-y:auto}
 #body{flex:1;padding:20px 28px;overflow-y:auto}
+
+/* SIDEBAR */
 .sg{padding:0 14px 6px;font-size:10px;font-weight:700;letter-spacing:.1em;color:var(--g4);text-transform:uppercase}
 .sdiv{border-top:1px solid var(--g2);margin:8px 0 6px}
-.tb{width:100%;padding:7px 14px;border:none;background:transparent;color:var(--g3);text-align:left;cursor:pointer;font-size:12px;font-weight:400;border-left:3px solid transparent;transition:all .12s;display:flex;align-items:center;gap:7px}
+.tb{width:100%;padding:7px 14px;border:none;background:transparent;color:var(--g3);text-align:left;cursor:pointer;font-size:12px;border-left:3px solid transparent;transition:all .12s;display:flex;align-items:center;gap:7px}
 .tb.active{background:var(--b3);color:var(--b1);font-weight:700;border-left:3px solid var(--b1)}
-.tb.locked{color:var(--g4);cursor:not-allowed}
-.lk{margin-left:auto;font-size:10px}
-.card{background:#fff;border:1px solid var(--b4);border-radius:10px;padding:16px 20px;margin-bottom:14px;box-shadow:0 1px 3px #1958A508}
+.tb.locked{color:var(--g4);cursor:not-allowed}.lk{margin-left:auto;font-size:10px}
+
+/* CARDS */
+.card{background:#fff;border:1px solid var(--b4);border-radius:10px;padding:16px 20px;margin-bottom:14px}
 .ct{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--b1);margin-bottom:12px;display:flex;align-items:center;gap:7px}
-.fw{margin-bottom:12px}
-.fw label{display:block;font-size:11px;color:var(--g3);margin-bottom:3px;font-weight:500}
+.fw{margin-bottom:12px}.fw label{display:block;font-size:11px;color:var(--g3);margin-bottom:3px;font-weight:500}
 .fh{font-size:10px;color:var(--g4);margin-top:2px}
 input[type=text],input[type=password],input[type=number],select{width:100%;padding:7px 10px;border-radius:7px;border:1px solid var(--b4);background:#fff;color:var(--dark);font-size:13px;outline:none;font-family:inherit}
-input[readonly]{color:var(--g3)}
-select{cursor:pointer}
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
-.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+input[type=text]:focus,input[type=password]:focus,input[type=number]:focus,select:focus{border-color:var(--b1)}
+input[readonly]{color:var(--g3);background:var(--g1)}
+
+/* BUTTONS */
 .bp{padding:9px 18px;border-radius:7px;border:none;background:var(--b1);color:#fff;font-size:12px;font-weight:600;cursor:pointer}
-.bs{padding:8px 14px;border-radius:7px;border:1px solid var(--b4);background:#fff;color:var(--b1);font-size:12px;cursor:pointer;font-weight:500}
+.bp:hover{background:#1348a0}.bp.dis,.bp:disabled{opacity:.4;cursor:not-allowed}
+.bs{padding:8px 14px;border-radius:7px;border:1px solid var(--b4);background:#fff;color:var(--b1);font-size:12px;cursor:pointer}
+.bs:hover{background:var(--b3)}
 .bg{padding:9px 18px;border-radius:7px;border:none;background:#15803D;color:#fff;font-size:12px;font-weight:600;cursor:pointer}
-.bp.dis,.bp:disabled{opacity:.4;cursor:not-allowed}
+.br{padding:8px 14px;border-radius:7px;border:1px solid #FECACA;background:#FEF2F2;color:var(--red);font-size:12px;cursor:pointer}
+
+/* ALERTS */
 .info{padding:9px 12px;border-radius:7px;font-size:12px;margin-bottom:9px}
 .ib{background:var(--b5);border:1px solid var(--b4);color:var(--b1)}
 .ig{background:#F0FDF4;border:1px solid #BBF7D0;color:var(--green)}
 .ir{background:#FEF2F2;border:1px solid #FECACA;color:var(--red)}
 .iy{background:#FFFBEB;border:1px solid #FDE68A;color:var(--amber)}
-.gps{padding:9px 12px;border-radius:7px;font-size:12px;display:flex;align-items:center;gap:7px}
-.gps.idle,.gps.checking{background:var(--b5);border:1px solid var(--b4);color:var(--b1)}
-.gps.ok{background:#F0FDF4;border:1px solid #86EFAC;color:var(--green)}
-.gps.outside,.gps.denied{background:#FEF9C3;border:1px solid #FDE047;color:var(--amber)}
+
+/* GRIDS */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+
+/* DROPS */
 .drop{border:2px dashed var(--b4);border-radius:10px;padding:28px 16px;text-align:center;cursor:pointer;background:var(--g1);transition:all .15s}
 .drop:hover,.drop.hov{border-color:var(--b1);background:var(--b5)}
-.drop .di{font-size:30px;margin-bottom:5px}
-.tag{padding:3px 10px;border-radius:20px;border:1px solid var(--b4);background:#fff;color:var(--g3);font-size:11px;font-family:monospace;cursor:pointer;transition:all .12s}
+.drop .di{font-size:28px;margin-bottom:5px}
+
+/* MISC */
+.tag{padding:3px 10px;border-radius:20px;border:1px solid var(--b4);background:#fff;color:var(--g3);font-size:11px;font-family:monospace;cursor:pointer}
 .tag.on{border-color:var(--b1);background:var(--b1);color:#fff}
+.ztag{padding:2px 8px;border-radius:5px;background:var(--b3);border:1px solid var(--b4);font-size:11px;font-family:monospace;color:var(--b1)}
+.tp{display:none}.tp.active{display:block}
+h2{font-size:17px;font-weight:700;color:var(--dark);margin-bottom:16px}
 table{width:100%;border-collapse:collapse;font-size:12px}
 th{padding:8px 10px;background:var(--b3);color:var(--b1);font-weight:700;font-size:10px;text-align:left;letter-spacing:.05em;border-bottom:1px solid var(--b4)}
 td{padding:7px 10px;border-bottom:1px solid var(--g2);color:var(--dark)}
@@ -61,39 +77,106 @@ tr:nth-child(even) td{background:var(--g1)}
 .mono{font-family:monospace}
 .fp{padding:2px 7px;border-radius:20px;background:#DCFCE7;color:#15803D;font-size:10px;font-weight:700}
 .ff{padding:2px 7px;border-radius:20px;background:#FEE2E2;color:#DC2626;font-size:10px;font-weight:700}
-.sni-btn{padding:7px 12px;border-radius:9px;border:2px solid var(--b4);background:#fff;color:var(--g3);font-size:11px;font-weight:600;cursor:pointer;transition:all .12s}
-.ztag{padding:3px 10px;border-radius:5px;background:var(--b3);border:1px solid var(--b4);font-size:11px;font-family:monospace;color:var(--b1)}
-.tp{display:none}.tp.active{display:block}
-h2{font-size:17px;font-weight:700;color:var(--dark);margin-bottom:16px}
-.frow{display:flex;align-items:center;gap:10px;padding:9px 12px;background:var(--g1);border-radius:7px;border:1px solid var(--g2);margin-bottom:6px}
-.nw{display:flex;gap:7px;align-items:center}
-.nw input{width:72px}
-.nw span{font-size:11px;color:var(--g3)}
-.stbox{border-radius:7px;padding:8px 10px;border:1px solid var(--b4);background:var(--b5)}
-.stk{font-size:10px;color:var(--g3)}
-.stv{font-size:13px;font-weight:700;color:var(--b1)}
-.sitem{display:flex;gap:10px;padding:8px 12px;background:var(--g1);border-radius:7px;border:1px solid var(--g2);margin-bottom:6px}
-.snum{width:20px;height:20px;border-radius:50%;background:var(--b1);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.rbtn{padding:10px 8px;border-radius:9px;border:2px solid var(--g2);background:#fff;color:var(--g3);font-size:11px;font-weight:600;cursor:pointer;transition:all .12s;text-align:center}
-.rbtn.active{border-color:var(--b1);background:var(--b3);color:var(--b1)}
 .pgbar{height:6px;border-radius:3px;background:var(--b4);margin:8px 0;overflow:hidden}
 .pgfill{height:100%;background:var(--b1);transition:width .4s;border-radius:3px}
+.rbtn{padding:10px 8px;border-radius:9px;border:2px solid var(--g2);background:#fff;color:var(--g3);font-size:11px;font-weight:600;cursor:pointer;text-align:center}
+.rbtn.active{border-color:var(--b1);background:var(--b3);color:var(--b1)}
+.stbox{border-radius:7px;padding:8px 10px;border:1px solid var(--b4);background:var(--b5)}
+.stk{font-size:10px;color:var(--g3)}.stv{font-size:13px;font-weight:700;color:var(--b1)}
+.frow{display:flex;align-items:center;gap:10px;padding:9px 12px;background:var(--g1);border-radius:7px;border:1px solid var(--g2);margin-bottom:6px}
+.nw{display:flex;gap:7px;align-items:center}.nw input{width:72px}.nw span{font-size:11px;color:var(--g3)}
+.sitem{display:flex;gap:10px;padding:8px 12px;background:var(--g1);border-radius:7px;border:1px solid var(--g2);margin-bottom:6px}
+.snum{width:20px;height:20px;border-radius:50%;background:var(--b1);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.filter-bar{display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.filter-bar label{font-size:11px;color:var(--g3);font-weight:600}
+.filter-bar select{width:auto;min-width:120px;padding:5px 8px;font-size:12px}
+.filter-bar input{width:150px;padding:5px 8px;font-size:12px}
+
+/* MODAL */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:900;align-items:center;justify-content:center}
+.modal-bg.show{display:flex}
+.modal{background:#fff;border-radius:14px;padding:24px 28px;width:400px;max-width:95vw}
+.modal h3{font-size:15px;font-weight:700;color:var(--dark);margin-bottom:14px}
+
+/* ENG ROWS */
+.eng-row{display:flex;align-items:center;gap:8px;padding:9px 12px;background:var(--g1);border-radius:8px;border:1px solid var(--g2);margin-bottom:6px}
+.eng-av{width:32px;height:32px;border-radius:50%;background:var(--b3);color:var(--b1);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.eng-info{flex:1}
+.eng-name-txt{font-size:12px;font-weight:600;color:var(--dark)}
+.eng-sub{font-size:10px;color:var(--g3)}
+.eng-role-badge{font-size:10px;color:var(--b1);background:var(--b3);padding:2px 7px;border-radius:20px}
 </style>
 </head>
 <body>
 
+<!-- ══ MODAL: Set/Reset Password ══ -->
+<div class="modal-bg" id="modal-setpw">
+  <div class="modal">
+    <h3 id="modal-setpw-title">🔑 Set Password</h3>
+    <div id="modal-setpw-info" class="info ib" style="margin-bottom:10px"></div>
+    <div class="fw"><label>Password Baru</label><input type="password" id="modal-pw1" placeholder="Minimal 8 karakter"/></div>
+    <div class="fw"><label>Konfirmasi Password</label><input type="password" id="modal-pw2" placeholder="Ulangi password"/></div>
+    <div id="modal-pw-err" class="info ir" style="display:none"></div>
+    <div style="display:flex;gap:8px;margin-top:4px">
+      <button class="bp" style="flex:1" onclick="confirmSetPw()">Simpan Password</button>
+      <button class="bs" onclick="closeModal('modal-setpw')">Batal</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MODAL: Tambah/Edit Engineer ══ -->
+<div class="modal-bg" id="modal-eng">
+  <div class="modal">
+    <h3 id="modal-eng-title">👤 Tambah Engineer</h3>
+    <input type="hidden" id="modal-eng-idx" value="-1"/>
+    <div class="fw"><label>Nama Lengkap</label><input type="text" id="modal-eng-name" placeholder="cth: Ahmad Fauzi"/></div>
+    <div class="fw"><label>Jabatan</label>
+      <select id="modal-eng-role">
+        <option>Senior Engineer</option>
+        <option>Junior Engineer</option>
+      </select>
+    </div>
+    <div class="fw"><label>Username (untuk login)</label><input type="text" id="modal-eng-user" placeholder="cth: ahmad.fauzi"/></div>
+    <div class="fw" id="modal-eng-pw-wrap"><label>Password</label><input type="password" id="modal-eng-pw" placeholder="Minimal 8 karakter"/></div>
+    <div id="modal-eng-err" class="info ir" style="display:none"></div>
+    <div style="display:flex;gap:8px;margin-top:4px">
+      <button class="bp" style="flex:1" onclick="saveEngineer()">Simpan</button>
+      <button class="bs" onclick="closeModal('modal-eng')">Batal</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MODAL: Reset PW Engineer ══ -->
+<div class="modal-bg" id="modal-reset-eng">
+  <div class="modal">
+    <h3>🔑 Reset Password Engineer</h3>
+    <div id="modal-reset-eng-info" class="info ib" style="margin-bottom:10px"></div>
+    <div class="fw"><label>Password Baru</label><input type="password" id="modal-reset-pw1" placeholder="Minimal 8 karakter"/></div>
+    <div class="fw"><label>Konfirmasi Password</label><input type="password" id="modal-reset-pw2" placeholder="Ulangi password"/></div>
+    <div id="modal-reset-eng-err" class="info ir" style="display:none"></div>
+    <div style="display:flex;gap:8px;margin-top:4px">
+      <button class="bp" style="flex:1" onclick="confirmResetEngPw()">Reset Password</button>
+      <button class="bs" onclick="closeModal('modal-reset-eng')">Batal</button>
+    </div>
+    <input type="hidden" id="modal-reset-eng-idx"/>
+  </div>
+</div>
+
+<!-- ══ HEADER ══ -->
 <div id="hdr">
   <img src="https://www.struclab.co.id/wp-content/uploads/2022/12/Logo-Small.png" alt="SJK" onerror="this.style.display='none'"/>
   <div class="hdiv"></div>
   <div><div id="ht">SJK-ETABSRebarPro</div><div id="hs">PT Struclab Jaya Konsultindo</div></div>
   <div id="hu" style="display:none">
-    <span id="hu-name">👤</span>
+    <span id="hu-name"></span>
     <span class="badge" id="hu-role"></span>
-    <span>📍 Kantor SJK</span>
+    <button class="bs" style="padding:3px 9px;font-size:10px" onclick="openResetSelf()">🔑 Reset PW</button>
+    <button class="br" style="padding:3px 9px;font-size:10px" onclick="doLogout()">Logout</button>
   </div>
 </div>
 
 <div id="main">
+  <!-- ══ SIDEBAR ══ -->
   <div id="side">
     <div class="sg">ALUR KERJA</div>
     <button class="tb active" data-tab="login" id="sb-login">🔐 Login</button>
@@ -103,109 +186,99 @@ h2{font-size:17px;font-weight:700;color:var(--dark);margin-bottom:16px}
     <button class="tb locked" data-tab="shear" id="sb-shear">⬡ Shear <span class="lk">🔒</span></button>
     <button class="tb locked" data-tab="output" id="sb-output">📦 Output <span class="lk">🔒</span></button>
     <div class="sdiv"></div>
-    <div class="sg" style="padding-top:6px">REFERENSI</div>
+    <div class="sg" style="padding-top:4px">REFERENSI</div>
     <button class="tb" data-tab="sni" id="sb-sni">📖 Panduan SNI</button>
     <div id="sb-extra" style="display:none">
       <div class="sdiv"></div>
-      <div class="sg" style="padding-top:6px">PROJECT</div>
-      <button class="tb">📂 Buka Project Lama</button>
-      <button class="tb" id="sb-mgmt" style="display:none">👥 Manajemen User</button>
+      <div class="sg" style="padding-top:4px">ADMIN</div>
+      <button class="tb" id="sb-mgmt" data-tab="mgmt" style="display:none">👥 Manajemen User</button>
     </div>
   </div>
 
   <div id="body">
 
-    <!-- ═══ LOGIN ═══ -->
+    <!-- ══════════════════════════════════════
+         PAGE: LOGIN
+    ══════════════════════════════════════ -->
     <div class="tp active" id="page-login">
       <div style="max-width:420px;margin:0 auto;padding-top:6px">
-        <div style="text-align:center;margin-bottom:20px">
-          <img src="https://www.struclab.co.id/wp-content/uploads/2022/12/Logo-Small.png" style="height:60px;margin-bottom:6px;object-fit:contain" onerror="this.style.display='none'"/>
+        <div style="text-align:center;margin-bottom:22px">
+          <img src="https://www.struclab.co.id/wp-content/uploads/2022/12/Logo-Small.png" style="height:56px;margin-bottom:8px;object-fit:contain" onerror="this.style.display='none'"/>
           <div style="font-size:19px;font-weight:700;color:var(--dark)">SJK-ETABSRebarPro</div>
           <div style="font-size:11px;color:var(--g3)">PT Struclab Jaya Konsultindo</div>
         </div>
-        <div id="ls1">
+
+        <!-- Step 1: Pilih Role -->
+        <div id="ls-step1">
           <div class="card">
             <div class="ct">👤 PILIH PERAN ANDA</div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px">
-              <button class="rbtn" onclick="selRole('Owner')">Owner</button>
-              <button class="rbtn" onclick="selRole('Admin')">Admin</button>
-              <button class="rbtn" onclick="selRole('Senior Engineer')">Senior Engineer</button>
-              <button class="rbtn" onclick="selRole('Junior Engineer')">Junior Engineer</button>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px">
+              <button class="rbtn" onclick="selRole('Owner')">👑 Owner</button>
+              <button class="rbtn" onclick="selRole('Admin')">🛡️ Admin</button>
+              <button class="rbtn" onclick="selRole('Senior Engineer')">🔩 Senior Engineer</button>
+              <button class="rbtn" onclick="selRole('Junior Engineer')">📐 Junior Engineer</button>
             </div>
-            <button class="bp dis" id="btn-role-next" style="width:100%" onclick="goS2()">Lanjut →</button>
-            <div style="text-align:center;margin-top:9px">
-              <button onclick="togReg()" style="background:none;border:none;color:var(--b1);font-size:11px;cursor:pointer;text-decoration:underline">Belum terdaftar? Hubungi kami</button>
-            </div>
-            <div id="reg-box" style="display:none;margin-top:10px;background:var(--b5);border:1px solid var(--b4);border-radius:10px;padding:14px">
-              <div class="ct">✉️ DAFTAR AKSES</div>
-              <div class="info ib">Kirim email berikut. Sertakan nama lengkap, jabatan, dan nomor telepon.</div>
-              <div style="padding:10px 12px;border-radius:7px;border:1px solid var(--b4);background:#fff;margin-bottom:7px">
-                <div style="font-size:10px;font-weight:700;color:var(--b1);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px">Owner</div>
-                <div style="font-family:monospace;font-size:12px;color:var(--dark)">a.sunjaya01@struclab.co.id</div>
-                <div style="font-size:10px;color:var(--g3)">Hubungi langsung owner SJK</div>
-              </div>
-              <div style="padding:10px 12px;border-radius:7px;border:1px solid var(--b4);background:#fff;margin-bottom:7px">
-                <div style="font-size:10px;font-weight:700;color:var(--b1);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px">Admin / Engineer</div>
-                <div style="font-family:monospace;font-size:12px;color:var(--dark)">admin@struclab.co.id</div>
-                <div style="font-size:10px;color:var(--g3)">Pendaftaran & approval akses</div>
-              </div>
-              <button id="btn-reg" class="bp" style="width:100%;margin-top:3px" onclick="sendReg()">Kirim Permintaan</button>
-              <div id="reg-ok" class="info ig" style="display:none;margin-top:7px;margin-bottom:0">✓ Tim SJK akan menghubungi dalam 1×24 jam.</div>
-            </div>
+            <button class="bp dis" id="btn-next-role" style="width:100%" onclick="goLoginStep2()">Lanjut →</button>
           </div>
         </div>
-        <div id="ls2a" style="display:none">
+
+        <!-- Step 2: Form Login -->
+        <div id="ls-step2" style="display:none">
           <div class="card">
-            <div class="ct" id="ls2a-title">🔐 LOGIN</div>
-            <div class="fw"><label>Password</label><input type="password" id="pw" placeholder="Masukkan password" oninput="chkPw()"/></div>
-            <div class="info ib" id="pw-notif"></div>
-            <button class="bp dis" id="btn-login" style="width:100%" onclick="doLogin()">Login</button>
-            <button class="bs" style="width:100%;margin-top:7px" onclick="back1()">← Kembali</button>
-          </div>
-        </div>
-        <div id="ls2b" style="display:none">
-          <div class="card">
-            <div class="ct">🔐 ENGINEER — MINTA AKSES</div>
-            <div class="fw"><label>Nama Anda (sesuai database SJK)</label><input type="text" id="eng-nm" placeholder="Nama lengkap" oninput="chkNm()"/></div>
-            <div id="eng-pre">
-              <div class="info ib">Klik tombol → OTP dikirim ke <strong>admin@struclab.co.id</strong>.</div>
-              <button class="bp dis" id="btn-otp" style="width:100%" onclick="reqOtp()">Minta Akses (Kirim OTP ke Admin)</button>
-            </div>
-            <div id="eng-post" style="display:none">
-              <div class="info ig">✓ OTP terkirim ke admin@struclab.co.id. Berlaku 15 menit.</div>
-              <div class="fw"><label>Kode OTP dari Admin</label><input type="text" id="otp-in" placeholder="● ● ● ● ● ●" style="letter-spacing:.3em;text-align:center;font-size:18px"/></div>
-              <div class="fw">
-                <label>Verifikasi Lokasi</label>
-                <div style="font-size:10px;color:var(--g4);margin-bottom:3px">Rukan Paris Golf Lake Residence Blok A No.81, Cengkareng, Jakarta Barat 11730</div>
-                <div class="gps idle" id="gps-box"><span id="gps-ic">📍</span><span id="gps-msg" style="flex:1">Belum dicek</span><button class="bs" style="padding:3px 9px;font-size:10px" onclick="chkGPS()">Cek GPS</button></div>
+            <div class="ct" id="ls2-title">🔐 LOGIN</div>
+
+            <!-- Owner/Admin: langsung username+password -->
+            <div id="ls2-owner-admin">
+              <div class="fw"><label>Password</label>
+                <input type="password" id="login-pw" placeholder="Masukkan password" oninput="chkLoginForm()"/>
               </div>
-              <button class="bp" id="btn-eng" style="width:100%;margin-top:3px;opacity:.5" onclick="doEng()">Verifikasi & Masuk</button>
             </div>
-            <button class="bs" style="width:100%;margin-top:7px" onclick="back1()">← Kembali</button>
+
+            <!-- Engineer: username + password -->
+            <div id="ls2-engineer" style="display:none">
+              <div class="fw"><label>Username</label>
+                <input type="text" id="login-user" placeholder="Username yang diberikan Admin" oninput="chkLoginForm()"/>
+              </div>
+              <div class="fw"><label>Password</label>
+                <input type="password" id="login-pw-eng" placeholder="Password Anda" oninput="chkLoginForm()"/>
+              </div>
+            </div>
+
+            <div id="login-err" class="info ir" style="display:none"></div>
+            <button class="bp dis" id="btn-do-login" style="width:100%;margin-top:4px" onclick="doLogin()">Masuk</button>
+            <button class="bs" style="width:100%;margin-top:8px" onclick="backToStep1()">← Kembali</button>
+
+            <!-- First-time setup notice -->
+            <div id="ls2-firsttime" style="display:none;margin-top:12px;padding:10px 12px;background:var(--b5);border:1px solid var(--b4);border-radius:8px;font-size:11px;color:var(--g3)">
+              ℹ️ Akun ini belum punya password. <a href="#" onclick="openFirstTimeSetup();return false" style="color:var(--b1)">Klik di sini untuk membuat password pertama kali.</a>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
 
-    <!-- ═══ PROJECT ═══ -->
+    <!-- ══════════════════════════════════════
+         PAGE: PROJECT
+    ══════════════════════════════════════ -->
     <div class="tp" id="page-project">
       <h2>Project Setup</h2>
       <div class="card">
         <div class="ct">📋 INFORMASI PROJECT</div>
         <div class="g2">
           <div class="fw"><label>Nama Project</label><input type="text" id="pnm" placeholder="cth: Gedung XYZ Lt.8" oninput="chkProj()"/></div>
-          <div class="fw"><label>No. Project</label><div class="fh">Otomatis</div><input readonly id="pno" value="SJK-2026-001"/></div>
+          <div class="fw"><label>No. Project</label><input readonly id="pno" value="SJK-2026-001"/></div>
           <div class="fw"><label>Engineer PIC</label><input readonly id="ppic"/></div>
           <div class="fw"><label>Tanggal</label><input readonly id="pdate"/></div>
         </div>
       </div>
       <div class="card">
         <div class="ct">📂 UPLOAD FILE E2K / $ET</div>
-        <div class="info ib">Upload file text model ETABS (.e2k atau .et). Data material, dimensi section, dan geometri balok akan dibaca otomatis.</div>
+        <div class="info ib">Upload file text model ETABS (.e2k atau .et). Dimensi section, material, dan story dibaca otomatis.</div>
         <div class="drop" id="drop-e2k" onclick="trigE2k()" ondragover="dov(event,'e2k')" ondragleave="dol('e2k')" ondrop="dof(event,'e2k')">
           <div class="di">📁</div>
-          <div style="color:var(--g3)">Drag & drop file .e2k atau .et dari komputer</div>
-          <div style="font-size:10px;color:var(--g4);margin-top:3px">ETABS v20+ | Klik untuk browse</div>
+          <div style="color:var(--g3)">Drag & drop file .e2k atau .et</div>
+          <div style="font-size:10px;color:var(--g4);margin-top:3px">ETABS v20–v23 | Klik untuk browse</div>
         </div>
         <input type="file" id="fi-e2k" accept=".e2k,.et,.txt" style="display:none" onchange="readE2k(this)"/>
         <div id="e2k-stats" style="display:none;margin-top:10px"></div>
@@ -213,65 +286,46 @@ h2{font-size:17px;font-weight:700;color:var(--dark);margin-bottom:16px}
       <button class="bp dis" id="btn-proj" onclick="goConfig()">Lanjut ke Parameter →</button>
     </div>
 
-    <!-- ═══ CONFIG ═══ -->
+    <!-- ══════════════════════════════════════
+         PAGE: CONFIG
+    ══════════════════════════════════════ -->
     <div class="tp" id="page-config">
       <h2>Parameter Desain</h2>
-      <div class="info ib">💡 Semua parameter tersimpan bersama project.</div>
       <div class="card">
         <div class="ct">🧱 MATERIAL & COVER</div>
         <div class="g3">
           <div class="fw"><label>fc' (MPa)</label><input type="number" id="fc" value="30" min="20" max="60" step="5"/></div>
           <div class="fw"><label>fy (MPa)</label><input type="number" id="fy" value="420" min="240" max="600" step="10"/></div>
           <div class="fw"><label>Agregat maks</label><select id="agg"><option value="10">10 mm</option><option value="16">16 mm</option><option value="20" selected>20 mm</option><option value="25">25 mm</option></select></div>
-          <div class="fw">
-            <label>Selimut beton</label>
-            <div class="fh">ke sisi terluar sengkang</div>
-            <div class="nw" style="margin-top:3px"><input type="number" id="cov" value="40" min="20" max="80" step="5"/><span>mm</span></div>
-          </div>
-          <div class="fw"><label>λ (beton ringan?)</label><select id="lam"><option value="1" selected>1.0 (normal)</option><option value="0.75">0.75 (ringan)</option></select></div>
+          <div class="fw"><label>Selimut beton</label><div class="fh">ke sisi terluar sengkang</div><div class="nw" style="margin-top:3px"><input type="number" id="cov" value="40" min="20" max="80" step="5"/><span>mm</span></div></div>
+          <div class="fw"><label>λ</label><select id="lam"><option value="1" selected>1.0 (normal)</option><option value="0.75">0.75 (ringan)</option></select></div>
         </div>
       </div>
       <div class="card">
         <div class="ct">🔩 TULANGAN LONGITUDINAL</div>
-        <div class="fw">
-          <label>Diameter tersedia</label>
-          <div class="fh">toggle aktif/nonaktif</div>
+        <div class="fw"><label>Diameter tersedia</label>
           <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px" id="diam-wrap">
-            <button class="tag on" onclick="togD(this)">D10</button>
-            <button class="tag on" onclick="togD(this)">D13</button>
-            <button class="tag on" onclick="togD(this)">D16</button>
-            <button class="tag on" onclick="togD(this)">D19</button>
-            <button class="tag on" onclick="togD(this)">D22</button>
-            <button class="tag on" onclick="togD(this)">D25</button>
+            <button class="tag on" onclick="togD(this)">D10</button><button class="tag on" onclick="togD(this)">D13</button>
+            <button class="tag on" onclick="togD(this)">D16</button><button class="tag on" onclick="togD(this)">D19</button>
+            <button class="tag on" onclick="togD(this)">D22</button><button class="tag on" onclick="togD(this)">D25</button>
           </div>
         </div>
         <div class="g3">
-          <div class="fw"><label>Diameter base maks</label><select id="dbase"><option>D16</option><option selected>D19</option><option>D22</option><option>D25</option></select></div>
-          <div class="fw"><label>Min induk (G)</label><select id="gmin"><option>D10</option><option selected>D13</option><option>D16</option></select></div>
-          <div class="fw"><label>Min anak (B)</label><select id="bmin"><option selected>D10</option><option>D13</option></select></div>
-          <div class="fw"><label>Add maks G</label><div class="fh">+tumpuan G</div><select id="addG"><option>D19</option><option selected>D22</option><option>D25</option></select></div>
-          <div class="fw"><label>Add maks B</label><div class="fh">+tumpuan B</div><select id="addB"><option selected>D19</option><option>D22</option></select></div>
+          <div class="fw"><label>Base maks</label><select id="dbase"><option>D16</option><option selected>D19</option><option>D22</option><option>D25</option></select></div>
+          <div class="fw"><label>Min Induk (G)</label><select id="gmin"><option>D10</option><option selected>D13</option><option>D16</option></select></div>
+          <div class="fw"><label>Min Anak (B)</label><select id="bmin"><option selected>D10</option><option>D13</option></select></div>
+          <div class="fw"><label>Add maks G</label><select id="addG"><option>D19</option><option selected>D22</option><option>D25</option></select></div>
+          <div class="fw"><label>Add maks B</label><select id="addB"><option selected>D19</option><option>D22</option></select></div>
         </div>
       </div>
       <div class="card">
         <div class="ct">⬡ SENGKANG</div>
         <div class="g3">
           <div class="fw"><label>Diameter sengkang</label><select id="swD"><option value="8">D8</option><option value="10" selected>D10</option><option value="13">D13</option></select></div>
-          <div class="fw">
-            <label>Spasi tumpuan maks</label>
-            <div class="fh">zona gempa: fix 100mm</div>
-            <div class="nw" style="margin-top:3px"><input type="number" id="swTump" value="100" min="50" max="150" step="25"/><span>mm</span></div>
-          </div>
+          <div class="fw"><label>Spasi tumpuan maks</label><div class="fh">fix 100mm zona gempa</div><div class="nw" style="margin-top:3px"><input type="number" id="swTump" value="100" min="50" max="150" step="25"/><span>mm</span></div></div>
           <div class="fw"><label>Pembulatan lapangan</label><select id="swRnd"><option value="5">5 mm</option><option value="10">10 mm</option><option value="25" selected>25 mm</option><option value="50">50 mm</option></select></div>
-          <div class="fw">
-            <label>Threshold 4 kaki</label>
-            <div class="fh">b > ini → 4 kaki lapangan</div>
-            <div class="nw" style="margin-top:3px"><input type="number" id="leg4" value="250" min="150" max="450" step="50"/><span>mm</span></div>
-          </div>
-          <div class="fw">
-            <label>Spasi min praktis</label>
-            <div class="nw" style="margin-top:3px"><input type="number" id="swMin" value="50" min="25" max="100" step="25"/><span>mm</span></div>
-          </div>
+          <div class="fw"><label>Threshold 4 kaki</label><div class="fh">b > ini → 4 kaki</div><div class="nw" style="margin-top:3px"><input type="number" id="leg4" value="250" min="150" max="450" step="50"/><span>mm</span></div></div>
+          <div class="fw"><label>Spasi min praktis</label><div class="nw" style="margin-top:3px"><input type="number" id="swMin" value="50" min="25" max="100" step="25"/><span>mm</span></div></div>
         </div>
       </div>
       <div class="card">
@@ -289,27 +343,38 @@ h2{font-size:17px;font-weight:700;color:var(--dark);margin-bottom:16px}
       <button class="bp" onclick="goFlex()">Simpan & Lanjut ke Longitudinal →</button>
     </div>
 
-    <!-- ═══ FLEXURAL ═══ -->
+    <!-- ══════════════════════════════════════
+         PAGE: FLEXURAL
+    ══════════════════════════════════════ -->
     <div class="tp" id="page-flexural">
       <h2>Desain Tulangan Longitudinal</h2>
       <div class="card">
         <div class="ct">📊 UPLOAD FLEXURAL EXCEL (ETABS)</div>
-        <div class="info ib">Export dari ETABS: <b>Design → Concrete Frame Design → Display Design Info → Tabulate → Concrete Beam Flexure Envelope</b> → Save as Excel.</div>
+        <div class="info ib">Export dari ETABS: <b>Design → Concrete Frame Design → Tabulate → Concrete Beam Flexure Envelope</b>.<br>Format: baris 1–3 = header/info ETABS, <b>data mulai baris 4</b>.</div>
         <div class="drop" id="drop-flex" onclick="trigFlex()" ondragover="dov(event,'flex')" ondragleave="dol('flex')" ondrop="dof(event,'flex')">
           <div class="di">📊</div>
-          <div style="color:var(--g3)">Upload "Concrete Beam Flexure Envelope" dari ETABS</div>
-          <div style="font-size:10px;color:var(--g4);margin-top:3px">Format kolom: Story | Label | UniqueName | Section | Location | As Top | As Bot</div>
+          <div style="color:var(--g3)">Upload Flexural Reinforcement Excel</div>
+          <div style="font-size:10px;color:var(--g4);margin-top:3px">Kolom: Story | Label | Section | Location | As Top | As Bot</div>
         </div>
         <input type="file" id="fi-flex" accept=".xlsx,.xls,.csv" style="display:none" onchange="readFlex(this)"/>
         <div id="flex-parse-info" style="display:none;margin-top:10px"></div>
       </div>
       <div id="flex-engine-wrap" style="display:none">
         <div class="card">
-          <div class="ct">⚙️ JALANKAN ENGINE M2 + M3</div>
-          <div class="info ib">Engine akan: (1) Grouping balok per section, (2) Pilih diameter tulangan optimum, (3) Cek jarak bersih, As min, As maks, SCWB.</div>
+          <div class="ct">⚙️ FILTER & JALANKAN ENGINE</div>
+          <div class="filter-bar">
+            <label>Lantai:</label>
+            <select id="flex-story-filter" onchange="renderFlexResult()"><option value="">Semua</option></select>
+            <label>Section:</label>
+            <input type="text" id="flex-sec-filter" placeholder="cth: G35x60" oninput="renderFlexResult()"/>
+            <label>Status:</label>
+            <select id="flex-flag-filter" onchange="renderFlexResult()">
+              <option value="">Semua</option><option value="PASS">PASS</option><option value="FAIL">FAIL</option>
+            </select>
+          </div>
           <div id="flex-prog" style="display:none">
             <div class="pgbar"><div class="pgfill" id="fp-bar" style="width:0%"></div></div>
-            <div id="fp-msg" style="font-size:11px;color:var(--g3);margin-top:4px">Memproses...</div>
+            <div id="fp-msg" style="font-size:11px;color:var(--g3);margin-top:4px"></div>
           </div>
           <button class="bp" id="btn-run-flex" onclick="runFlex()">▶ Jalankan Engine Longitudinal</button>
         </div>
@@ -317,45 +382,59 @@ h2{font-size:17px;font-weight:700;color:var(--dark);margin-bottom:16px}
           <div class="card">
             <div class="ct">🔩 HASIL TULANGAN LONGITUDINAL</div>
             <div id="flex-summary" class="info ig" style="margin-bottom:10px"></div>
-            <div style="overflow-x:auto"><table id="tbl-flex"><thead><tr><th>Group</th><th>Section</th><th>b×h (mm)</th><th>Tul. Atas Tump</th><th>Tul. Bawah Lap</th><th>As Top (mm²)</th><th>As Bot (mm²)</th><th>Flag</th></tr></thead><tbody id="tbody-flex"></tbody></table></div>
+            <div id="flex-stats" class="g4" style="margin-bottom:12px"></div>
+            <div style="overflow-x:auto">
+              <table><thead><tr>
+                <th>Story</th><th>Section</th><th>b×h (mm)</th>
+                <th>Tul. Atas Tump</th><th>Tul. Bawah Lap</th>
+                <th>As Top (mm²)</th><th>As Bot (mm²)</th><th>Status</th>
+              </tr></thead><tbody id="tbody-flex"></tbody></table>
+            </div>
           </div>
           <div class="card">
             <div class="ct">📋 LANGKAH SELANJUTNYA</div>
-            <div class="sitem"><div class="snum">1</div><div><div style="font-weight:600">Download file E2K versi 1</div><div style="font-size:10px;color:var(--g3)">Section diupdate dengan As terpasang tulangan longitudinal</div></div></div>
-            <div class="sitem"><div class="snum">2</div><div><div style="font-weight:600">Import ke ETABS & Run analisis</div><div style="font-size:10px;color:var(--g3)">Gunakan file E2K baru → run ulang untuk dapatkan gaya geser terbaru</div></div></div>
-            <div class="sitem"><div class="snum">3</div><div><div style="font-weight:600">Export Shear Envelope</div><div style="font-size:10px;color:var(--g3)">Design → Concrete Beam Shear Envelope → Save as Excel</div></div></div>
-            <div class="sitem"><div class="snum">4</div><div><div style="font-weight:600">Upload di tab Shear</div><div style="font-size:10px;color:var(--g3)">Engine M4 akan hitung sengkang tumpuan & lapangan</div></div></div>
-            <div style="margin-top:10px">
-              <button class="bg" onclick="dlE2K()">⬇️ Download E2K Versi 1 (tulangan longitudinal)</button>
-            </div>
+            <div class="sitem"><div class="snum">1</div><div><b>Download E2K v1</b><div style="font-size:10px;color:var(--g3)">Section diupdate dengan As terpasang</div></div></div>
+            <div class="sitem"><div class="snum">2</div><div><b>Import ke ETABS & Run ulang</b><div style="font-size:10px;color:var(--g3)">Untuk dapatkan gaya geser yang akurat</div></div></div>
+            <div class="sitem"><div class="snum">3</div><div><b>Export Shear Envelope → Upload di tab Shear</b></div></div>
+            <div style="margin-top:10px"><button class="bg" onclick="dlE2K()">⬇️ Download E2K Versi 1</button></div>
           </div>
           <button class="bp" onclick="goShear()">Lanjut ke Tab Shear →</button>
         </div>
       </div>
     </div>
 
-    <!-- ═══ SHEAR ═══ -->
+    <!-- ══════════════════════════════════════
+         PAGE: SHEAR
+    ══════════════════════════════════════ -->
     <div class="tp" id="page-shear">
       <h2>Desain Sengkang</h2>
-      <div class="info ib">Upload Shear Envelope dari ETABS yang sudah di-run ulang dengan E2K versi 1.</div>
       <div class="card">
         <div class="ct">📊 UPLOAD SHEAR EXCEL (ETABS)</div>
-        <div class="info ib">Export dari ETABS: <b>Design → Concrete Frame Design → Display Design Info → Tabulate → Concrete Beam Shear Envelope</b> → Save as Excel.</div>
+        <div class="info ib">Upload Shear Envelope setelah run ulang dengan E2K v1. Format: <b>baris 1–3 header, data mulai baris 4</b>.</div>
         <div class="drop" id="drop-shear" onclick="trigShear()" ondragover="dov(event,'shear')" ondragleave="dol('shear')" ondrop="dof(event,'shear')">
           <div class="di">📊</div>
-          <div style="color:var(--g3)">Upload "Concrete Beam Shear Envelope" dari ETABS</div>
-          <div style="font-size:10px;color:var(--g4);margin-top:3px">Format kolom: Story | Label | UniqueName | Section | Location | Shear Force | VRebar Av/s</div>
+          <div style="color:var(--g3)">Upload Shear Reinforcement Excel</div>
+          <div style="font-size:10px;color:var(--g4);margin-top:3px">Kolom: Story | Label | Section | Location | Shear Force | VRebar Av/s</div>
         </div>
         <input type="file" id="fi-shear" accept=".xlsx,.xls,.csv" style="display:none" onchange="readShear(this)"/>
         <div id="shear-parse-info" style="display:none;margin-top:10px"></div>
       </div>
       <div id="shear-engine-wrap" style="display:none">
         <div class="card">
-          <div class="ct">⚙️ JALANKAN ENGINE M4</div>
-          <div class="info ib">Engine hitung sengkang: tumpuan pakai VRebar Av/s langsung (Vc=0 zona gempa), lapangan hitung Vs = Vu/φ − Vc sendiri.</div>
+          <div class="ct">⚙️ FILTER & JALANKAN ENGINE</div>
+          <div class="filter-bar">
+            <label>Lantai:</label>
+            <select id="shear-story-filter" onchange="renderShearResult()"><option value="">Semua</option></select>
+            <label>Section:</label>
+            <input type="text" id="shear-sec-filter" placeholder="cth: G35x60" oninput="renderShearResult()"/>
+            <label>Status:</label>
+            <select id="shear-flag-filter" onchange="renderShearResult()">
+              <option value="">Semua</option><option value="PASS">PASS</option><option value="FAIL">FAIL</option>
+            </select>
+          </div>
           <div id="shear-prog" style="display:none">
             <div class="pgbar"><div class="pgfill" id="sp-bar" style="width:0%"></div></div>
-            <div id="sp-msg" style="font-size:11px;color:var(--g3);margin-top:4px">Memproses...</div>
+            <div id="sp-msg" style="font-size:11px;color:var(--g3);margin-top:4px"></div>
           </div>
           <button class="bp" id="btn-run-shear" onclick="runShear()">▶ Jalankan Engine Sengkang</button>
         </div>
@@ -363,262 +442,547 @@ h2{font-size:17px;font-weight:700;color:var(--dark);margin-bottom:16px}
           <div class="card">
             <div class="ct">⬡ HASIL SENGKANG</div>
             <div id="shear-summary" class="info ig" style="margin-bottom:10px"></div>
-            <div style="overflow-x:auto"><table><thead><tr><th>Group</th><th>Section</th><th>b×h</th><th>Sengkang Tumpuan</th><th>Sengkang Lapangan</th><th>Flag</th></tr></thead><tbody id="tbody-shear"></tbody></table></div>
+            <div style="overflow-x:auto">
+              <table><thead><tr>
+                <th>Story</th><th>Section</th><th>b×h</th>
+                <th>Sengkang Tumpuan</th><th>Sengkang Lapangan</th><th>Status</th>
+              </tr></thead><tbody id="tbody-shear"></tbody></table>
+            </div>
           </div>
           <button class="bp" onclick="goOutput()">Lanjut ke Output →</button>
         </div>
       </div>
     </div>
 
-    <!-- ═══ OUTPUT ═══ -->
+    <!-- ══════════════════════════════════════
+         PAGE: OUTPUT
+    ══════════════════════════════════════ -->
     <div class="tp" id="page-output">
       <h2>Output & Download</h2>
       <div class="card">
         <div class="ct">📦 FILE OUTPUT</div>
         <div id="out-files"></div>
-        <button class="bp" style="width:100%;margin-top:6px" onclick="dlAll()">⬇️ Download Semua (ZIP)</button>
+        <button class="bp" style="width:100%;margin-top:8px" onclick="dlAll()">⬇️ Download Semua</button>
       </div>
       <div class="card">
         <div class="ct">💾 SAVE PROJECT</div>
-        <div id="save-name" style="font-family:monospace;font-size:12px;color:var(--b1);padding:9px 12px;background:var(--b5);border-radius:7px;border:1px solid var(--b4);margin-bottom:10px"></div>
-        <button class="bp" id="btn-save" onclick="saveProj()">💾 Simpan Project ke Database</button>
+        <div id="save-name" style="font-family:monospace;font-size:12px;color:var(--b1);padding:9px;background:var(--b5);border-radius:7px;border:1px solid var(--b4);margin-bottom:10px"></div>
+        <button class="bp" id="btn-save" onclick="saveProj()">💾 Simpan Project</button>
         <div id="save-ok" class="info ig" style="display:none;margin-top:7px"></div>
       </div>
     </div>
 
-    <!-- ═══ SNI ═══ -->
+    <!-- ══════════════════════════════════════
+         PAGE: MANAJEMEN USER
+    ══════════════════════════════════════ -->
+    <div class="tp" id="page-mgmt">
+      <h2>Manajemen User</h2>
+
+      <!-- Panel Owner: ubah password Admin -->
+      <div id="mgmt-owner-panel" style="display:none">
+        <div class="card">
+          <div class="ct">🛡️ PASSWORD ADMIN</div>
+          <div class="info ib">Ubah password akun Admin.</div>
+          <button class="bp" onclick="openSetPw('Admin','admin')">🔑 Set/Reset Password Admin</button>
+        </div>
+      </div>
+
+      <!-- Daftar Engineer -->
+      <div class="card">
+        <div class="ct">👥 DAFTAR ENGINEER</div>
+        <button class="bp" style="margin-bottom:12px" onclick="openAddEng()">➕ Tambah Engineer Baru</button>
+        <div id="eng-list">
+          <div class="info ib">Memuat daftar...</div>
+        </div>
+      </div>
+
+      <!-- Reset password Owner sendiri (hanya Owner) -->
+      <div id="mgmt-owner-pw" style="display:none">
+        <div class="card">
+          <div class="ct">👑 PASSWORD OWNER</div>
+          <button class="bp" onclick="openSetPw('Owner','owner')">🔑 Ubah Password Owner</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         PAGE: SNI
+    ══════════════════════════════════════ -->
     <div class="tp" id="page-sni">
       <h2>Referensi SNI</h2>
-      <p style="font-size:12px;color:var(--g3);margin-bottom:14px">Pasal acuan desain engine SJK-ETABSRebarPro.</p>
       <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
-        <button class="sni-btn" id="sb1" onclick="setSNI('s1')" style="border-color:#1958A5;background:#1958A515;color:#1958A5">SNI 2847:2019</button>
-        <button class="sni-btn" id="sb2" onclick="setSNI('s2')">SNI 1726:2019</button>
-        <button class="sni-btn" id="sb3" onclick="setSNI('s3')">SNI 1727:2020</button>
+        <button class="sni-btn" id="sb1" onclick="setSNI('s1')" style="padding:7px 12px;border-radius:9px;border:2px solid #1958A5;background:#1958A515;color:#1958A5;font-size:11px;font-weight:600;cursor:pointer">SNI 2847:2019</button>
+        <button class="sni-btn" id="sb2" onclick="setSNI('s2')" style="padding:7px 12px;border-radius:9px;border:2px solid var(--b4);background:#fff;color:var(--g3);font-size:11px;font-weight:600;cursor:pointer">SNI 1726:2019</button>
+        <button class="sni-btn" id="sb3" onclick="setSNI('s3')" style="padding:7px 12px;border-radius:9px;border:2px solid var(--b4);background:#fff;color:var(--g3);font-size:11px;font-weight:600;cursor:pointer">SNI 1727:2020</button>
       </div>
       <div id="sni-hdr" style="padding:8px 13px;border-radius:7px;margin-bottom:10px;background:#1958A510;border:1px solid #1958A530">
-        <div id="sni-code" style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#1958A5">SNI 2847:2019</div>
+        <div id="sni-code" style="font-size:10px;font-weight:700;text-transform:uppercase;color:#1958A5">SNI 2847:2019</div>
         <div id="sni-sub" style="font-size:12px;color:var(--dark);margin-top:2px">Persyaratan Beton Struktural untuk Bangunan Gedung</div>
       </div>
       <div style="position:relative;margin-bottom:10px">
-        <span style="position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--g4)">🔍</span>
-        <input type="text" id="sni-q" placeholder="Cari pasal atau topik..." style="padding-left:30px" oninput="fSNI()"/>
+        <input type="text" id="sni-q" placeholder="🔍 Cari pasal atau topik..." oninput="fSNI()"/>
       </div>
       <div id="sni-list"></div>
     </div>
 
-  </div>
-</div>
+  </div><!-- /body -->
+</div><!-- /main -->
 
 <script>
-/* ══════════════════════════════════════════════════════
-   KONSTANTA
-══════════════════════════════════════════════════════ */
-const OFC_LAT=-6.132316, OFC_LNG=106.7288165, OFC_R=300;
-const PI=Math.PI;
+/* ═══════════════════════════════════════════════════════
+   AUTH & USER MANAGEMENT
+═══════════════════════════════════════════════════════ */
 
-/* ══ STATE ══ */
-let cRole='', gpsOk=false;
-let e2kParsed=false, e2kData={sections:{},stories:[]};
-let flexData=[], shearData=[];
-let flexResult=[], shearResult=[];
-let cfg={fc:30,fy:420,agg:20,cov:40,lam:1,swD:10,swTump:100,swRnd:25,leg4:250,swMin:50};
+// Simpan semua data di localStorage dengan prefix 'sjk_'
+function lsGet(k){try{return JSON.parse(localStorage.getItem('sjk_'+k))}catch{return null}}
+function lsSet(k,v){localStorage.setItem('sjk_'+k,JSON.stringify(v))}
 
-/* ══ UTILS ══ */
-function haversine(la1,ln1,la2,ln2){
-  const r=PI/180,dL=(la2-la1)*r,dN=(ln2-ln1)*r;
-  const a=Math.sin(dL/2)**2+Math.cos(la1*r)*Math.cos(la2*r)*Math.sin(dN/2)**2;
-  return 6371000*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
+// Hash password sederhana (deterministik, klien-saja)
+function pwHash(s){
+  let h=5381;for(let i=0;i<s.length;i++)h=(Math.imul(h,33)^s.charCodeAt(i))>>>0;
+  return 'h'+h.toString(36);
 }
-function now(){const d=new Date();return d.toLocaleString('id-ID',{timeZone:'Asia/Jakarta',year:'numeric',month:'long',day:'numeric',hour:'2-digit',minute:'2-digit'}) +' WIB';}
-function rnd(v,n=2){return Math.round(v*10**n)/10**n;}
-function ceil25(v,m=25){return Math.ceil(v/m)*m;}
 
-/* ══ NAVIGASI ══ */
+// Inisialisasi akun Owner & Admin (hanya sekali, kalau belum ada)
+function initAccounts(){
+  if(!lsGet('owner_init')){
+    lsSet('owner_pw',null); // null = belum punya password → wajib set pertama kali
+    lsSet('owner_init',true);
+  }
+  if(!lsGet('admin_init')){
+    lsSet('admin_pw',null);
+    lsSet('admin_init',true);
+  }
+  if(!lsGet('engineers')) lsSet('engineers',[]);
+}
+initAccounts();
+
+// Daftar engineer: [{name, username, role, pw_hash}]
+function getEngineers(){return lsGet('engineers')||[];}
+function saveEngineers(list){lsSet('engineers',list);}
+
+/* — SESSION — */
+let SESSION={role:'',name:'',username:''};
+
+/* ═══════════════════════════════════════════════════════
+   MODAL HELPERS
+═══════════════════════════════════════════════════════ */
+function openModal(id){document.getElementById(id).classList.add('show');}
+function closeModal(id){document.getElementById(id).classList.remove('show');}
+
+/* ═══ SET / RESET PASSWORD ═══ */
+let _setPwTarget=null; // {type:'owner'|'admin'|'engineer', idx?}
+
+function openSetPw(label,type,idx){
+  _setPwTarget={type,idx};
+  document.getElementById('modal-setpw-title').textContent='🔑 Set Password — '+label;
+  document.getElementById('modal-setpw-info').textContent=
+    type==='owner'?'Ubah password akun Owner.':
+    type==='admin'?'Ubah password akun Admin.':
+    'Set password baru untuk engineer ini.';
+  document.getElementById('modal-pw1').value='';
+  document.getElementById('modal-pw2').value='';
+  document.getElementById('modal-pw-err').style.display='none';
+  openModal('modal-setpw');
+}
+
+function openResetSelf(){
+  const label=SESSION.role==='Owner'?'Owner':SESSION.role==='Admin'?'Admin':SESSION.name;
+  const type=SESSION.role==='Owner'?'owner':SESSION.role==='Admin'?'admin':'self_eng';
+  const idx=SESSION.role.includes('Engineer')?
+    getEngineers().findIndex(e=>e.username===SESSION.username):-1;
+  openSetPw(label,type,idx);
+}
+
+function openFirstTimeSetup(){
+  const type=_loginRole==='Owner'?'owner':'admin';
+  openSetPw(_loginRole,type);
+}
+
+function confirmSetPw(){
+  const p1=document.getElementById('modal-pw1').value;
+  const p2=document.getElementById('modal-pw2').value;
+  const err=document.getElementById('modal-pw-err');
+  if(p1.length<8){err.style.display='block';err.textContent='Password minimal 8 karakter.';return;}
+  if(p1!==p2){err.style.display='block';err.textContent='Konfirmasi password tidak cocok.';return;}
+  const h=pwHash(p1);
+  const t=_setPwTarget.type;
+  if(t==='owner') lsSet('owner_pw',h);
+  else if(t==='admin') lsSet('admin_pw',h);
+  else if(t==='self_eng'||t==='engineer'){
+    const list=getEngineers();
+    const idx=_setPwTarget.idx;
+    if(idx>=0){list[idx].pw_hash=h;saveEngineers(list);}
+  }
+  closeModal('modal-setpw');
+  alert('✅ Password berhasil disimpan.');
+  // Kalau ini first-time setup Owner/Admin, langsung login
+  if(t==='owner'||t==='admin') doLoginAfterFirstSetup(t,p1);
+}
+
+function doLoginAfterFirstSetup(type,pw){
+  const role=type==='owner'?'Owner':'Admin';
+  finishLogin(role, role+' SJK', role.toLowerCase());
+}
+
+/* ═══ ENGINEER MODAL ═══ */
+function openAddEng(){
+  document.getElementById('modal-eng-title').textContent='👤 Tambah Engineer Baru';
+  document.getElementById('modal-eng-idx').value='-1';
+  document.getElementById('modal-eng-name').value='';
+  document.getElementById('modal-eng-user').value='';
+  document.getElementById('modal-eng-pw').value='';
+  document.getElementById('modal-eng-pw-wrap').style.display='block';
+  document.getElementById('modal-eng-role').value='Senior Engineer';
+  document.getElementById('modal-eng-err').style.display='none';
+  openModal('modal-eng');
+}
+
+function openEditEng(idx){
+  const list=getEngineers();
+  const e=list[idx];
+  document.getElementById('modal-eng-title').textContent='✏️ Edit Engineer';
+  document.getElementById('modal-eng-idx').value=idx;
+  document.getElementById('modal-eng-name').value=e.name;
+  document.getElementById('modal-eng-user').value=e.username;
+  document.getElementById('modal-eng-pw').value='';
+  document.getElementById('modal-eng-pw-wrap').style.display='none'; // edit: ganti pw terpisah
+  document.getElementById('modal-eng-role').value=e.role;
+  document.getElementById('modal-eng-err').style.display='none';
+  openModal('modal-eng');
+}
+
+function saveEngineer(){
+  const idx=parseInt(document.getElementById('modal-eng-idx').value);
+  const nm=document.getElementById('modal-eng-name').value.trim();
+  const usr=document.getElementById('modal-eng-user').value.trim().toLowerCase();
+  const pw=document.getElementById('modal-eng-pw').value;
+  const rl=document.getElementById('modal-eng-role').value;
+  const err=document.getElementById('modal-eng-err');
+
+  if(!nm||!usr){err.style.display='block';err.textContent='Nama dan username wajib diisi.';return;}
+
+  const list=getEngineers();
+  if(idx===-1){
+    // Tambah baru
+    if(pw.length<8){err.style.display='block';err.textContent='Password minimal 8 karakter.';return;}
+    const dup=list.find(e=>e.username===usr);
+    if(dup){err.style.display='block';err.textContent='Username sudah digunakan.';return;}
+    list.push({name:nm, username:usr, role:rl, pw_hash:pwHash(pw)});
+  } else {
+    // Edit
+    list[idx].name=nm;
+    list[idx].username=usr;
+    list[idx].role=rl;
+  }
+  saveEngineers(list);
+  closeModal('modal-eng');
+  renderEngList();
+}
+
+function deleteEngineer(idx){
+  const list=getEngineers();
+  if(!confirm('Hapus engineer "'+list[idx].name+'"? Data ini tidak dapat dikembalikan.')) return;
+  list.splice(idx,1);
+  saveEngineers(list);
+  renderEngList();
+}
+
+function openResetEngPw(idx){
+  const list=getEngineers();
+  document.getElementById('modal-reset-eng-info').textContent=
+    'Reset password untuk: '+list[idx].name+' ('+list[idx].username+')';
+  document.getElementById('modal-reset-pw1').value='';
+  document.getElementById('modal-reset-pw2').value='';
+  document.getElementById('modal-reset-eng-err').style.display='none';
+  document.getElementById('modal-reset-eng-idx').value=idx;
+  openModal('modal-reset-eng');
+}
+
+function confirmResetEngPw(){
+  const p1=document.getElementById('modal-reset-pw1').value;
+  const p2=document.getElementById('modal-reset-pw2').value;
+  const idx=parseInt(document.getElementById('modal-reset-eng-idx').value);
+  const err=document.getElementById('modal-reset-eng-err');
+  if(p1.length<8){err.style.display='block';err.textContent='Password minimal 8 karakter.';return;}
+  if(p1!==p2){err.style.display='block';err.textContent='Konfirmasi tidak cocok.';return;}
+  const list=getEngineers();
+  list[idx].pw_hash=pwHash(p1);
+  saveEngineers(list);
+  closeModal('modal-reset-eng');
+  alert('✅ Password '+list[idx].name+' berhasil direset.');
+}
+
+function renderEngList(){
+  const list=getEngineers();
+  const el=document.getElementById('eng-list');
+  if(!el) return;
+  if(!list.length){
+    el.innerHTML='<div class="info ib">Belum ada engineer terdaftar. Klik "Tambah Engineer Baru" untuk menambahkan.</div>';
+    return;
+  }
+  el.innerHTML=list.map((e,i)=>`
+    <div class="eng-row">
+      <div class="eng-av">${e.name.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase()}</div>
+      <div class="eng-info">
+        <div class="eng-name-txt">${e.name}</div>
+        <div class="eng-sub">@${e.username} &nbsp;·&nbsp; <span class="eng-role-badge">${e.role}</span></div>
+      </div>
+      <button class="bs" style="padding:4px 9px;font-size:11px" onclick="openEditEng(${i})">✏️ Edit</button>
+      <button class="bs" style="padding:4px 9px;font-size:11px" onclick="openResetEngPw(${i})">🔑 PW</button>
+      <button class="br" style="padding:4px 9px;font-size:11px" onclick="deleteEngineer(${i})">✕ Hapus</button>
+    </div>`).join('');
+}
+
+/* ═══════════════════════════════════════════════════════
+   LOGIN FLOW
+═══════════════════════════════════════════════════════ */
+let cRole='', _loginRole='';
+
+function selRole(r){
+  cRole=r;
+  document.querySelectorAll('.rbtn').forEach(b=>{
+    b.classList.toggle('active', b.textContent.trim().replace(/[👑🛡️🔩📐]/g,'').trim()===r||b.textContent.includes(r));
+  });
+  const btn=document.getElementById('btn-next-role');
+  btn.classList.remove('dis'); btn.disabled=false;
+}
+
+function goLoginStep2(){
+  if(!cRole) return;
+  _loginRole=cRole;
+  document.getElementById('ls-step1').style.display='none';
+  document.getElementById('ls-step2').style.display='block';
+  document.getElementById('ls2-title').textContent='🔐 LOGIN — '+cRole.toUpperCase();
+  document.getElementById('login-err').style.display='none';
+  document.getElementById('ls2-firsttime').style.display='none';
+
+  const isEng=cRole.includes('Engineer');
+  document.getElementById('ls2-owner-admin').style.display=isEng?'none':'block';
+  document.getElementById('ls2-engineer').style.display=isEng?'block':'none';
+
+  if(!isEng){
+    // Cek apakah sudah punya password
+    const pwStored=lsGet(cRole==='Owner'?'owner_pw':'admin_pw');
+    if(!pwStored){
+      document.getElementById('ls2-firsttime').style.display='block';
+      _setPwTarget={type:cRole==='Owner'?'owner':'admin'};
+    }
+  }
+  document.getElementById('btn-do-login').classList.add('dis');
+  document.getElementById('btn-do-login').disabled=true;
+}
+
+function backToStep1(){
+  document.getElementById('ls-step1').style.display='block';
+  document.getElementById('ls-step2').style.display='none';
+  cRole='';
+  document.querySelectorAll('.rbtn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('btn-next-role').classList.add('dis');
+  document.getElementById('btn-next-role').disabled=true;
+}
+
+function chkLoginForm(){
+  const isEng=_loginRole.includes('Engineer');
+  let ok=false;
+  if(isEng){
+    const u=document.getElementById('login-user').value.trim();
+    const p=document.getElementById('login-pw-eng').value;
+    ok=u.length>0&&p.length>0;
+  } else {
+    ok=document.getElementById('login-pw').value.length>0;
+  }
+  document.getElementById('btn-do-login').classList.toggle('dis',!ok);
+  document.getElementById('btn-do-login').disabled=!ok;
+}
+
+function doLogin(){
+  const isEng=_loginRole.includes('Engineer');
+  const err=document.getElementById('login-err');
+  err.style.display='none';
+
+  if(!isEng){
+    const pw=document.getElementById('login-pw').value;
+    const storedHash=lsGet(_loginRole==='Owner'?'owner_pw':'admin_pw');
+    if(!storedHash){
+      err.style.display='block';
+      err.textContent='Akun belum punya password. Gunakan link di bawah untuk membuat password.';
+      return;
+    }
+    if(pwHash(pw)!==storedHash){
+      err.style.display='block';
+      err.textContent='❌ Password salah. Coba lagi.';
+      document.getElementById('login-pw').value='';
+      return;
+    }
+    finishLogin(_loginRole, _loginRole+' SJK', _loginRole.toLowerCase());
+  } else {
+    const usr=document.getElementById('login-user').value.trim().toLowerCase();
+    const pw=document.getElementById('login-pw-eng').value;
+    const list=getEngineers();
+    const eng=list.find(e=>e.username===usr&&e.role===_loginRole);
+    if(!eng){
+      err.style.display='block';
+      err.textContent='❌ Username tidak ditemukan atau jabatan tidak cocok.';
+      return;
+    }
+    if(!eng.pw_hash||pwHash(pw)!==eng.pw_hash){
+      err.style.display='block';
+      err.textContent='❌ Password salah.';
+      document.getElementById('login-pw-eng').value='';
+      return;
+    }
+    finishLogin(_loginRole, eng.name, eng.username);
+  }
+}
+
+function finishLogin(role, name, username){
+  SESSION={role,name,username};
+  // Header
+  document.getElementById('hu').style.display='flex';
+  document.getElementById('hu-name').textContent='👤 '+name;
+  document.getElementById('hu-role').textContent=role;
+  // Project info
+  document.getElementById('ppic').value=name+' ('+role+')';
+  document.getElementById('pdate').value=nowStr();
+  // Unlock sidebar
+  unlock('project'); showTab('project');
+  document.getElementById('sb-extra').style.display='block';
+  if(role==='Owner'||role==='Admin'){
+    const mgmtBtn=document.getElementById('sb-mgmt');
+    mgmtBtn.style.display='flex';
+    renderEngList();
+    // Tampilkan panel Owner
+    if(role==='Owner'){
+      document.getElementById('mgmt-owner-panel').style.display='block';
+      document.getElementById('mgmt-owner-pw').style.display='block';
+    }
+  }
+}
+
+function doLogout(){if(confirm('Yakin ingin logout?')) location.reload();}
+
+/* ═══════════════════════════════════════════════════════
+   NAVIGASI
+═══════════════════════════════════════════════════════ */
 function showTab(id){
   document.querySelectorAll('.tp').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.tb').forEach(b=>b.classList.remove('active'));
-  document.getElementById('page-'+id).classList.add('active');
-  const sb=document.getElementById('sb-'+id);
-  if(sb)sb.classList.add('active');
+  const pg=document.getElementById('page-'+id);if(pg)pg.classList.add('active');
+  const sb=document.getElementById('sb-'+id);if(sb)sb.classList.add('active');
+  if(id==='mgmt') renderEngList();
 }
 document.querySelectorAll('.tb').forEach(b=>{
   b.addEventListener('click',()=>{
-    if(b.classList.contains('locked'))return;
-    const t=b.getAttribute('data-tab');
-    if(t)showTab(t);
+    if(b.classList.contains('locked')) return;
+    const t=b.getAttribute('data-tab');if(t) showTab(t);
   });
 });
 function unlock(id){
-  const s=document.getElementById('sb-'+id);
-  if(!s)return;
+  const s=document.getElementById('sb-'+id);if(!s)return;
   s.classList.remove('locked');
   s.innerHTML=s.innerHTML.replace(/<span class="lk">.*?<\/span>/,'');
 }
-
-/* ══ LOGIN ══ */
-function selRole(r){
-  cRole=r;
-  document.querySelectorAll('.rbtn').forEach(b=>b.classList.toggle('active',b.textContent.trim()===r));
-  const btn=document.getElementById('btn-role-next');
-  btn.classList.remove('dis'); btn.disabled=false;
-}
-function goS2(){
-  if(!cRole)return;
-  document.getElementById('ls1').style.display='none';
-  const isE=cRole.includes('Engineer');
-  if(!isE){
-    document.getElementById('ls2a').style.display='block';
-    document.getElementById('ls2a-title').textContent='🔐 LOGIN — '+cRole.toUpperCase();
-    document.getElementById('pw-notif').innerHTML='📧 Notifikasi ke <strong>'+(cRole==='Owner'?'a.sunjaya01@struclab.co.id':'admin@struclab.co.id')+'</strong>';
-  } else {
-    document.getElementById('ls2b').style.display='block';
-  }
-}
-function back1(){
-  document.getElementById('ls1').style.display='block';
-  document.getElementById('ls2a').style.display='none';
-  document.getElementById('ls2b').style.display='none';
-  cRole=''; document.querySelectorAll('.rbtn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('btn-role-next').classList.add('dis');
-}
-function chkPw(){const v=document.getElementById('pw').value;const b=document.getElementById('btn-login');b.classList.toggle('dis',!v);b.disabled=!v;}
-function chkNm(){const v=document.getElementById('eng-nm').value;const b=document.getElementById('btn-otp');b.classList.toggle('dis',!v);b.disabled=!v;}
-function doLogin(){if(document.getElementById('pw').value)finish();}
-function reqOtp(){
-  if(!document.getElementById('eng-nm').value)return;
-  document.getElementById('eng-pre').style.display='none';
-  document.getElementById('eng-post').style.display='block';
-}
-function doEng(){if(gpsOk)finish();}
-function finish(){
-  document.getElementById('hu').style.display='flex';
-  document.getElementById('hu-name').textContent='👤 '+(cRole.includes('Engineer')?document.getElementById('eng-nm').value:'User SJK');
-  document.getElementById('hu-role').textContent=cRole;
-  document.getElementById('ppic').value=(cRole.includes('Engineer')?document.getElementById('eng-nm').value:'User SJK')+' ('+cRole+')';
-  document.getElementById('pdate').value=now();
-  unlock('project'); showTab('project');
-  document.getElementById('sb-extra').style.display='block';
-  if(cRole==='Owner'||cRole==='Admin')document.getElementById('sb-mgmt').style.display='flex';
-}
-function togReg(){const b=document.getElementById('reg-box');b.style.display=b.style.display==='none'?'block':'none';}
-function sendReg(){document.getElementById('btn-reg').style.display='none';document.getElementById('reg-ok').style.display='block';}
-function chkGPS(){
-  const box=document.getElementById('gps-box'),ic=document.getElementById('gps-ic'),msg=document.getElementById('gps-msg');
-  box.className='gps checking';ic.textContent='⏳';msg.textContent='Memeriksa...';
-  if(!navigator.geolocation){box.className='gps denied';ic.textContent='❌';msg.textContent='GPS tidak didukung';return;}
-  navigator.geolocation.getCurrentPosition(pos=>{
-    const d=Math.round(haversine(pos.coords.latitude,pos.coords.longitude,OFC_LAT,OFC_LNG));
-    if(d<=OFC_R){box.className='gps ok';ic.textContent='✅';msg.textContent='Terverifikasi ('+d+'m dari kantor)';gpsOk=true;document.getElementById('btn-eng').style.opacity='1';}
-    else{box.className='gps outside';ic.textContent='⚠️';msg.textContent='Di luar area ('+d+'m, maks '+OFC_R+'m)';}
-  },()=>{box.className='gps denied';ic.textContent='❌';msg.textContent='Izin lokasi ditolak';});
+function nowStr(){
+  return new Date().toLocaleString('id-ID',{timeZone:'Asia/Jakarta',year:'numeric',month:'long',day:'numeric',hour:'2-digit',minute:'2-digit'})+' WIB';
 }
 
-/* ══ PROJECT ══ */
+/* ═══════════════════════════════════════════════════════
+   PROJECT
+═══════════════════════════════════════════════════════ */
+let e2kParsed=false, e2kData={sections:{},stories:[]};
+let flexData=[], shearData=[], flexResult=[], shearResult=[];
+let cfg={};
+
 function chkProj(){
   const ok=document.getElementById('pnm').value&&e2kParsed;
-  const b=document.getElementById('btn-proj');
-  b.classList.toggle('dis',!ok); b.disabled=!ok;
+  document.getElementById('btn-proj').classList.toggle('dis',!ok);
+  document.getElementById('btn-proj').disabled=!ok;
 }
 function goConfig(){if(!document.getElementById('pnm').value||!e2kParsed)return;unlock('config');showTab('config');updZones(1);}
 
-/* ── E2K PARSER ── */
+/* ═══ E2K PARSER ═══ */
 function trigE2k(){document.getElementById('fi-e2k').click();}
 function dov(e,id){e.preventDefault();document.getElementById('drop-'+id).classList.add('hov');}
 function dol(id){document.getElementById('drop-'+id).classList.remove('hov');}
-function dof(e,id){e.preventDefault();dol(id);const f=e.dataTransfer.files[0];if(!f)return;if(id==='e2k')parseE2k(f);else if(id==='flex')parseFlex(f);else if(id==='shear')parseShear(f);}
+function dof(e,id){e.preventDefault();dol(id);const f=e.dataTransfer.files[0];if(!f)return;
+  if(id==='e2k')parseE2k(f);else if(id==='flex')parseFlex(f);else parseShear(f);}
 function readE2k(inp){if(inp.files[0])parseE2k(inp.files[0]);}
 
 function parseE2k(file){
   const drop=document.getElementById('drop-e2k');
-  drop.innerHTML='<div class="di">⏳</div><div style="color:var(--b1)">Mem-parse file E2K...</div>';
-  const reader=new FileReader();
-  reader.onload=e=>{
-    const txt=e.target.result;
+  drop.innerHTML='<div class="di">⏳</div><div style="color:var(--b1)">Mem-parse...</div>';
+  const r=new FileReader();
+  r.onload=e=>{
     try{
-      e2kData=parseE2kText(txt);
-      const ns=Object.keys(e2kData.sections).length;
-      const nb=Object.values(e2kData.sections).filter(s=>s.type==='BEAM').length;
-      drop.innerHTML=`<div class="di">✅</div><div style="color:var(--green);font-weight:600">${file.name}</div><div style="font-size:10px;color:var(--g3);margin-top:3px">Parse selesai — ${ns} section, ${nb} tipe balok, ${e2kData.stories.length} lantai</div>`;
-      // stats
-      const st=document.getElementById('e2k-stats');
-      st.style.display='block';
-      st.innerHTML=`<div class="g4">
-        <div class="stbox"><div class="stk">Stories</div><div class="stv">${e2kData.stories.length}</div></div>
-        <div class="stbox"><div class="stk">Section Balok</div><div class="stv">${nb}</div></div>
-        <div class="stbox"><div class="stk">fc'</div><div class="stv">${e2kData.fc||30} MPa</div></div>
-        <div class="stbox"><div class="stk">fy</div><div class="stv">${e2kData.fy||420} MPa</div></div>
-      </div>
-      <div class="info iy" style="margin-top:8px">⚠️ Section BB (balok tangga) dan KB (kolom tangga pendek) dikecualikan otomatis.</div>`;
-      if(e2kData.fc)document.getElementById('fc').value=e2kData.fc;
-      if(e2kData.fy)document.getElementById('fy').value=e2kData.fy;
-      e2kParsed=true; chkProj();
-    } catch(err){
-      drop.innerHTML=`<div class="di">❌</div><div style="color:var(--red)">Error: ${err.message}</div>`;
-    }
+      const d=parseE2kText(e.target.result);
+      const nb=Object.values(d.sections).filter(s=>s.type==='BEAM').length;
+      drop.innerHTML=`<div class="di">✅</div><div style="color:var(--green);font-weight:600">${file.name}</div>
+        <div style="font-size:10px;color:var(--g3);margin-top:3px">${nb} section balok · ${d.stories.length} lantai</div>`;
+      document.getElementById('e2k-stats').style.display='block';
+      document.getElementById('e2k-stats').innerHTML=`<div class="g4">
+        <div class="stbox"><div class="stk">Stories</div><div class="stv">${d.stories.length}</div></div>
+        <div class="stbox"><div class="stk">Sec. Balok</div><div class="stv">${nb}</div></div>
+        <div class="stbox"><div class="stk">fc' (MPa)</div><div class="stv">${d.fc||'?'}</div></div>
+        <div class="stbox"><div class="stk">fy (MPa)</div><div class="stv">${d.fy||'?'}</div></div></div>
+        <div class="info iy" style="margin-top:8px">⚠️ Section BB dan KB dikecualikan otomatis.</div>`;
+      if(d.fc) document.getElementById('fc').value=d.fc;
+      if(d.fy) document.getElementById('fy').value=d.fy;
+      e2kData=d; e2kParsed=true; chkProj();
+    }catch(err){drop.innerHTML=`<div class="di">❌</div><div style="color:var(--red)">${err.message}</div>`;}
   };
-  reader.readAsText(file);
+  r.readAsText(file);
 }
 
 function parseE2kText(txt){
   const lines=txt.split(/\r?\n/);
   const data={sections:{},stories:[],fc:null,fy:null};
-  let inSec=false,inMat=false,inStory=false;
   for(const raw of lines){
     const line=raw.trim();
-    if(!line||line.startsWith('$'))continue;
-    if(line.includes('$ FRAME SECTION PROPERTIES'))inSec=true;
-    if(line.includes('$ MATERIAL PROPERTIES'))inMat=true;
-    if(line.includes('$ STORIES'))inStory=true;
-
-    // Material
-    if(inMat&&line.startsWith('MATERIAL')){
-      const fc=line.match(/FC=([\d.]+)/i);
-      const fy=line.match(/FY=([\d.]+)/i);
-      if(fc&&!data.fc)data.fc=parseFloat(fc[1]);
-      if(fy&&!data.fy)data.fy=parseFloat(fy[1]);
+    if(!line||line.startsWith('$')) continue;
+    // Stories
+    if(line.startsWith('STORY')){
+      const m=line.match(/STORY\s+"?([^"\s]+)"?/i);
+      if(m&&m[1]!=='BASE'&&!data.stories.includes(m[1])) data.stories.push(m[1]);
     }
-    // Section
-    if(line.startsWith('FRAMESECTION')||line.startsWith('SECTION')){
-      const nm=line.match(/NAME="?([^"\s]+)"?/i)?.[1]||line.match(/FRAMESECTION\s+"?([^"\s]+)"?/i)?.[1];
-      const b=line.match(/\bT3=([\d.]+)/i)?.[1]||line.match(/\bB=([\d.]+)/i)?.[1];
-      const h=line.match(/\bT2=([\d.]+)/i)?.[1]||line.match(/\bH=([\d.]+)/i)?.[1];
-      if(nm&&b&&h){
-        const bv=parseFloat(b)*1000, hv=parseFloat(h)*1000;
-        const up=nm.toUpperCase();
-        const skip=up.startsWith('BB')||up.startsWith('KB');
-        const type=up.startsWith('G')||up.startsWith('KG')?'BEAM_G':up.startsWith('B')?'BEAM':'OTHER';
-        data.sections[nm]={name:nm,b:Math.round(bv),h:Math.round(hv),type:type.startsWith('BEAM')?'BEAM':'OTHER',kind:type,skip};
+    // Material — FC dan FY
+    if(line.startsWith('MATERIAL')&&line.includes('FC')){
+      const fc=line.match(/\bFC\b\s+([\d.]+)/i);
+      const fy=line.match(/\bFY\b\s+([\d.]+)/i);
+      if(fc&&!data.fc){const v=parseFloat(fc[1]);data.fc=v>1000?Math.round(v/1000):v;}
+      if(fy&&!data.fy){const v=parseFloat(fy[1]);data.fy=v>10000?Math.round(v/1000):v;}
+    }
+    // Frame sections
+    if(line.startsWith('FRAMESECTION')&&line.includes('"')){
+      const nm=line.match(/FRAMESECTION\s+"([^"]+)"/i)?.[1];
+      const D=line.match(/\bD\s+([\d.]+)/i);
+      const B=line.match(/\bB\s+([\d.]+)/i);
+      if(!nm||!D||!B) continue;
+      let h=parseFloat(D[1]),b=parseFloat(B[1]);
+      if(h<10) h=Math.round(h*1000); // m → mm
+      if(b<10) b=Math.round(b*1000);
+      const up=nm.toUpperCase();
+      const skip=up.startsWith('BB')||up.startsWith('KB');
+      const isBeam=!skip&&(up.match(/^(G\d|B\d|G[A-Z]|B[A-Z]|TG|TB|CANT)/)||up.match(/^[GB]\d/));
+      if(!skip&&(isBeam||up.match(/^(G|B)/i))){
+        const isG=up.match(/^(G|TG)/i);
+        data.sections[nm]={name:nm,b,h,type:'BEAM',kind:isG?'BEAM_G':'BEAM',skip:false};
       }
     }
-    // Stories
-    if(inStory&&line.startsWith('STORY')){
-      const nm=line.match(/NAME="?([^"\s]+)"?/i)?.[1];
-      if(nm&&nm!=='BASE'&&!data.stories.includes(nm))data.stories.push(nm);
-    }
   }
-  // fallback: kalau e2k format lain
-  if(!Object.keys(data.sections).length){
-    // coba format lain
-    for(const raw of lines){
-      const line=raw.trim();
-      const m=line.match(/^([A-Z]\S+)\s+(\d+)[xX×](\d+)/i);
-      if(m){const nm=m[1],bv=+m[2],hv=+m[3];const up=nm.toUpperCase();data.sections[nm]={name:nm,b:bv,h:hv,type:'BEAM',kind:up.startsWith('G')?'BEAM_G':'BEAM',skip:false};}
-    }
-  }
-  if(!data.stories.length)data.stories=['L2','L3','L4','L5','L6','L7','L8'];
+  if(!data.stories.length) data.stories=['LT.2','LT.3','Roof','ATAP'];
   return data;
 }
 
-/* ══ CONFIG ══ */
+/* ═══ CONFIG ═══ */
 function togD(btn){btn.classList.toggle('on');}
 function updZones(v){
-  const sl=['L2','L3','L4','L5','L6','L7','L8','DECK RF'];
-  const st=e2kData.stories.length?e2kData.stories:sl;
+  const sl=e2kData.stories.length?e2kData.stories:['LT.2','LT.3','Roof','ATAP'];
   document.getElementById('spzv').textContent=v;
   document.getElementById('spzn').textContent=v;
   const cont=document.getElementById('zone-wrap');cont.innerHTML='';
-  for(let i=0;i<st.length;i+=+v){
-    const z=st.slice(i,i+v),zi=Math.floor(i/v)+1;
+  for(let i=0;i<sl.length;i+=+v){
+    const z=sl.slice(i,i+v),zi=Math.floor(i/v)+1;
     const t=document.createElement('div');t.className='ztag';
     t.innerHTML=`<span style="color:var(--g3)">Z${zi} </span>${z.length===1?z[0]:z[0]+'–'+z[z.length-1]}`;
     cont.appendChild(t);
@@ -626,513 +990,456 @@ function updZones(v){
 }
 function getCfg(){
   return{
-    fc:+document.getElementById('fc').value,
-    fy:+document.getElementById('fy').value,
-    agg:+document.getElementById('agg').value,
-    cov:+document.getElementById('cov').value,
-    lam:+document.getElementById('lam').value,
-    swD:+document.getElementById('swD').value,
-    swTump:+document.getElementById('swTump').value,
-    swRnd:+document.getElementById('swRnd').value,
-    leg4:+document.getElementById('leg4').value,
-    swMin:+document.getElementById('swMin').value,
+    fc:+document.getElementById('fc').value,fy:+document.getElementById('fy').value,
+    agg:+document.getElementById('agg').value,cov:+document.getElementById('cov').value,
+    lam:+document.getElementById('lam').value,swD:+document.getElementById('swD').value,
+    swTump:+document.getElementById('swTump').value,swRnd:+document.getElementById('swRnd').value,
+    leg4:+document.getElementById('leg4').value,swMin:+document.getElementById('swMin').value,
     diams:[...document.querySelectorAll('#diam-wrap .tag.on')].map(b=>+b.textContent.replace('D','')).sort((a,b)=>a-b),
   };
 }
 function goFlex(){cfg=getCfg();unlock('flexural');showTab('flexural');}
 
-/* ══ FLEXURAL PARSER ══ */
+/* ═══ EXCEL PARSER (Flexural) ═══ */
+const DB={8:50.3,10:78.5,13:132.7,16:201.1,19:283.5,22:380.1,25:490.9};
+
 function trigFlex(){document.getElementById('fi-flex').click();}
 function readFlex(inp){if(inp.files[0])parseFlex(inp.files[0]);}
+
+function parseETABSExcel(file, onDone){
+  // Baris 1-3 = header/info ETABS, data mulai baris 4
+  const r=new FileReader();
+  r.onload=e=>{
+    try{
+      const wb=XLSX.read(e.target.result,{type:'array'});
+      const ws=wb.Sheets[wb.SheetNames[0]];
+      const all=XLSX.utils.sheet_to_json(ws,{header:1,defval:''});
+      // Auto-detect header row (cari baris yang ada kata 'story' atau 'section')
+      let hIdx=2; // default baris ke-3 (index 2)
+      for(let i=0;i<Math.min(6,all.length);i++){
+        const row=all[i].map(c=>String(c).toLowerCase());
+        if(row.some(c=>c.includes('story'))&&row.some(c=>c.includes('section'))){hIdx=i;break;}
+      }
+      const headers=all[hIdx].map(c=>String(c).trim());
+      const dataRows=all.slice(hIdx+1);
+      onDone(headers, dataRows, file.name);
+    }catch(err){onDone(null,null,file.name,err.message);}
+  };
+  r.readAsArrayBuffer(file);
+}
+
+function colFind(headers, ...keywords){
+  for(const kw of keywords){
+    const idx=headers.findIndex(h=>h.toLowerCase().replace(/[\s()/²\[\]]/g,'').includes(kw.toLowerCase().replace(/\s/g,'')));
+    if(idx>=0) return idx;
+  }
+  return -1;
+}
 
 function parseFlex(file){
   const drop=document.getElementById('drop-flex');
   drop.innerHTML='<div class="di">⏳</div><div style="color:var(--b1)">Mem-parse Flexural Excel...</div>';
-  const reader=new FileReader();
-  reader.onload=e=>{
-    try{
-      const wb=XLSX.read(e.target.result,{type:'array'});
-      const ws=wb.Sheets[wb.SheetNames[0]];
-      const raw=XLSX.utils.sheet_to_json(ws,{defval:''});
-      // normalize kolom
-      flexData=[];
-      for(const row of raw){
-        const keys=Object.keys(row).map(k=>k.toLowerCase().replace(/\s+/g,'').replace(/[()²/]/g,''));
-        const get=(pat)=>{const k=Object.keys(row).find(k=>k.toLowerCase().replace(/\s+/g,'').replace(/[()²/]/g,'').includes(pat));return k?row[k]:undefined;};
-        const story=String(get('story')||'').trim();
-        const label=String(get('label')||'').trim();
-        const section=String(get('section')||'').trim();
-        const loc=String(get('location')||'').trim();
-        const asTop=parseFloat(get('astop')||get('as-top')||get('areatop')||0)||0;
-        const asBot=parseFloat(get('asbot')||get('as-bot')||get('areabot')||0)||0;
-        if(!story||!label||!section)continue;
-        // skip BB, KB
-        if(/^(BB|KB)/i.test(section))continue;
-        flexData.push({story,label,section,location:loc,asTop,asBot});
-      }
-      if(!flexData.length)throw new Error('Tidak ada data valid. Periksa format kolom Excel.');
-      drop.innerHTML=`<div class="di">✅</div><div style="color:var(--green);font-weight:600">${file.name}</div><div style="font-size:10px;color:var(--g3);margin-top:3px">${flexData.length} baris valid terbaca</div>`;
-      document.getElementById('flex-parse-info').style.display='block';
-      document.getElementById('flex-parse-info').innerHTML=`<div class="info ig">✓ ${flexData.length} baris Flexural Envelope berhasil dibaca. Klik "Jalankan Engine" di bawah.</div>`;
-      document.getElementById('flex-engine-wrap').style.display='block';
-    }catch(err){
-      drop.innerHTML=`<div class="di">❌</div><div style="color:var(--red)">${err.message}</div>`;
+  parseETABSExcel(file,(headers,rows,fname,err)=>{
+    if(err){drop.innerHTML=`<div class="di">❌</div><div style="color:var(--red)">${err}</div>`;return;}
+    const ci={
+      story: colFind(headers,'story'),
+      label: colFind(headers,'label'),
+      section: colFind(headers,'section','sect'),
+      location: colFind(headers,'location','loc'),
+      asTop: colFind(headers,'astop','atop','areatoprebar','as-top','renftop','top'),
+      asBot: colFind(headers,'asbot','abot','areabottomrebar','as-bot','renfbot','bot','bottom'),
+    };
+    flexData=[];
+    for(const row of rows){
+      if(!row||!row.length||!row[ci.story]) continue;
+      const story=String(row[ci.story]).trim();
+      const section=String(row[ci.section]??'').trim();
+      if(!story||!section||/^(BB|KB)/i.test(section)) continue;
+      let asTop=parseFloat(row[ci.asTop]??0)||0;
+      let asBot=parseFloat(row[ci.asBot]??0)||0;
+      // ETABS bisa output dalam m² (kecil) atau mm² (besar) — deteksi otomatis
+      if(asTop<1&&asTop>0) asTop=asTop*1e6; // m² → mm²
+      if(asBot<1&&asBot>0) asBot=asBot*1e6;
+      flexData.push({
+        story, label:String(row[ci.label]??'').trim(), section,
+        location:String(row[ci.location]??'').trim(), asTop, asBot
+      });
     }
-  };
-  reader.readAsArrayBuffer(file);
+    if(!flexData.length){
+      drop.innerHTML=`<div class="di">❌</div><div style="color:var(--red)">Tidak ada data valid. Pastikan format: baris 1-3 header, data mulai baris 4.</div>`;
+      return;
+    }
+    const stories=[...new Set(flexData.map(r=>r.story))];
+    const sf=document.getElementById('flex-story-filter');
+    sf.innerHTML='<option value="">Semua</option>'+stories.map(s=>`<option>${s}</option>`).join('');
+    drop.innerHTML=`<div class="di">✅</div><div style="color:var(--green);font-weight:600">${fname}</div>
+      <div style="font-size:10px;color:var(--g3);margin-top:3px">${flexData.length} baris · ${stories.length} lantai terdeteksi</div>`;
+    document.getElementById('flex-parse-info').style.display='block';
+    document.getElementById('flex-parse-info').innerHTML=
+      `<div class="info ig">✓ ${flexData.length} baris Flexural Envelope berhasil dibaca dari ${stories.length} lantai.</div>`;
+    document.getElementById('flex-engine-wrap').style.display='block';
+  });
 }
 
-/* ══ ENGINE M2 + M3 (LONGITUDINAL) ══ */
-const DB={10:78.5,13:132.7,16:201.1,19:283.5,22:380.1,25:490.9};
+/* ═══ ENGINE LONGITUDINAL ═══ */
+function rebarLabel(nb,db,na,da){return na?`${nb}D${db}+${na}D${da}`:`${nb}D${db}`;}
 
-function asRebar(n,d){return n*DB[d];}
-
-function calcAsTump(asPerlu, secName, fc, fy, bw, d, kind){
-  // As min SNI 9.6.1.2
-  const asMin=Math.max(0.25*Math.sqrt(fc)/fy*bw*d, 1.4/fy*bw*d);
-  // As max SNI 9.3.3.1
-  const asMax=0.025*bw*d;
-  const asReq=Math.max(asPerlu, asMin);
-  return {asReq, asMin, asMax};
-}
-
-function pickRebar(asReq, asMax, diams, dBase, dAdd, cov, swD, bw, isTop){
-  // pilih kombinasi tulangan optimum
-  // base: semua D <= dBase, add: D <= dAdd
-  const baseDiams=diams.filter(d=>d<=dBase);
-  const addDiams=diams.filter(d=>d<=dAdd);
+function pickRebar(asReq,asMax,diams,dBaseMax,dAddMax,cov,swD,bw){
+  const bases=diams.filter(d=>d<=dBaseMax);
+  const adds=diams.filter(d=>d>=dBaseMax&&d<=dAddMax);
   let best=null;
-  for(const db of [...baseDiams].reverse()){
-    for(let nb=1;nb<=8;nb++){
-      const asBase=asRebar(nb,db);
-      // coba tanpa add
-      if(asBase>=asReq&&asBase<=asMax){
-        const ok=checkSpacing(nb,0,db,0,cov,swD,bw);
-        if(ok){best={nb,db,na:0,da:0,as:asBase};break;}
-      }
-      // coba dengan add
-      for(const da of [...addDiams].filter(x=>x>=db).reverse()){
+  outer:for(const db of [...bases].reverse()){
+    for(let nb=2;nb<=8;nb++){
+      const ab=nb*DB[db];
+      if(ab>=asReq&&ab<=asMax*1.1&&chkSpc(nb,0,db,0,cov,swD,bw)){best={nb,db,na:0,da:0,as:ab};break outer;}
+      for(const da of [...adds].reverse()){
         for(let na=1;na<=4;na++){
-          const as=asBase+asRebar(na,da);
-          if(as>=asReq&&as<=asMax){
-            const ok=checkSpacing(nb,na,db,da,cov,swD,bw);
-            if(ok){best={nb,db,na,da,as};break;}
-          }
+          const as=ab+na*DB[da];
+          if(as>=asReq&&as<=asMax*1.1&&chkSpc(nb,na,db,da,cov,swD,bw)){best={nb,db,na,da,as};break outer;}
         }
-        if(best)break;
       }
-      if(best)break;
     }
-    if(best)break;
   }
-  if(!best){
-    // paksa pilih terbesar
-    const db=baseDiams[baseDiams.length-1]||16;
-    const nb=Math.ceil(asReq/DB[db]);
-    best={nb,db,na:0,da:0,as:asRebar(nb,db)};
-  }
+  if(!best){const db=bases[bases.length-1]||16;const nb=Math.max(2,Math.ceil(asReq/DB[db]));best={nb,db,na:0,da:0,as:nb*DB[db]};}
   return best;
 }
-
-function checkSpacing(nb,na,db,da,cov,swD,bw){
+function chkSpc(nb,na,db,da,cov,swD,bw){
   const cover=cov+swD+db/2;
-  const totalBars=nb+(na||0);
-  if(totalBars<2)return true;
-  const gap=(bw-2*cover-(nb*db+(na?na*da:0)))/(totalBars-1);
-  const minGap=Math.max(25,da||db,4/3*20);
-  return gap>=minGap;
-}
-
-function rebarLabel(nb,db,na,da){
-  if(!na)return `${nb}D${db}`;
-  return `${nb}D${db}+${na}D${da}`;
+  const total=nb+na;
+  if(total<2) return true;
+  const gap=(bw-2*cover-(nb*db+na*da))/(total-1);
+  return gap>=Math.max(25,da||db,4/3*20);
 }
 
 function runFlex(){
   cfg=getCfg();
   document.getElementById('flex-prog').style.display='block';
   document.getElementById('btn-run-flex').disabled=true;
-
+  document.getElementById('fp-msg').textContent='Grouping...';
+  document.getElementById('fp-bar').style.width='10%';
   setTimeout(()=>{
     try{
-      const bar=document.getElementById('fp-bar'), msg=document.getElementById('fp-msg');
-      bar.style.width='20%'; msg.textContent='Grouping section...';
-
-      // GROUP by section
-      const groups={};
+      document.getElementById('fp-bar').style.width='40%';
+      document.getElementById('fp-msg').textContent='Menghitung tulangan...';
+      // Group by story+section
+      const grpMap={};
       for(const row of flexData){
-        if(!groups[row.section])groups[row.section]={section:row.section,rows:[],asTopMax:0,asBotMax:0};
-        groups[row.section].rows.push(row);
-        groups[row.section].asTopMax=Math.max(groups[row.section].asTopMax,row.asTop);
-        groups[row.section].asBotMax=Math.max(groups[row.section].asBotMax,row.asBot);
+        const k=row.story+'||'+row.section;
+        if(!grpMap[k]) grpMap[k]={story:row.story,section:row.section,asTopMax:0,asBotMax:0};
+        grpMap[k].asTopMax=Math.max(grpMap[k].asTopMax,row.asTop);
+        grpMap[k].asBotMax=Math.max(grpMap[k].asBotMax,row.asBot);
       }
-
-      bar.style.width='50%'; msg.textContent='Menghitung tulangan...';
-
       flexResult=[];
-      const secList=Object.values(groups);
-      // sort: G induk dulu, lalu B anak, urut h
-      secList.sort((a,b)=>{
-        const aG=a.section.toUpperCase().startsWith('G');
-        const bG=b.section.toUpperCase().startsWith('G');
-        if(aG!==bG)return bG-aG;
-        const sa=e2kData.sections[a.section];
-        const sb=e2kData.sections[b.section];
-        return (sb?sb.h:0)-(sa?sa.h:0);
-      });
-
+      const dBaseMax=parseInt(document.getElementById('dbase').value.replace('D',''));
+      const dAddG=parseInt(document.getElementById('addG').value.replace('D',''));
+      const dAddB=parseInt(document.getElementById('addB').value.replace('D',''));
       let gi=1,bi=1;
-      for(const grp of secList){
+      for(const [,grp] of Object.entries(grpMap)){
         const sec=e2kData.sections[grp.section];
-        const b=sec?sec.b:parseInt(grp.section.match(/\d+/)?.[0]||300);
-        const h=sec?sec.h:parseInt(grp.section.match(/\d+.*?(\d+)/)?.[1]||600);
-        const isG=grp.section.toUpperCase().startsWith('G');
-        const dBase=cfg.diams.filter(d=>d<=parseInt(document.getElementById('dbase').value.replace('D','')))||[19];
-        const dBaseMax=parseInt(document.getElementById('dbase').value.replace('D',''));
-        const dAddMaxG=parseInt(document.getElementById('addG').value.replace('D',''));
-        const dAddMaxB=parseInt(document.getElementById('addB').value.replace('D',''));
-        const dMin=parseInt(isG?document.getElementById('gmin').value.replace('D',''):document.getElementById('bmin').value.replace('D',''));
-
-        const d=h-cfg.cov-cfg.swD-dBaseMax/2; // effective depth mm
-        const {asReq:asTopReq}=calcAsTump(grp.asTopMax,grp.section,cfg.fc,cfg.fy,b,d,'top');
-        const {asReq:asBotReq,asMax}=calcAsTump(grp.asBotMax,grp.section,cfg.fc,cfg.fy,b,d,'bot');
-
-        const dAdd=isG?dAddMaxG:dAddMaxB;
-        const topR=pickRebar(asTopReq,asMax,cfg.diams,dBaseMax,dAdd,cfg.cov,cfg.swD,b,true);
-        const botR=pickRebar(asBotReq,asMax,cfg.diams,dBaseMax,dBaseMax,cfg.cov,cfg.swD,b,false);
-
-        // SRPMK: As tumpuan ≥ As lapangan/4
-        const asBotMin4=botR.as/4;
-        let topFinal=topR;
-        if(topFinal.as<asBotMin4){
-          topFinal=pickRebar(asBotMin4,asMax,cfg.diams,dBaseMax,dAdd,cfg.cov,cfg.swD,b,true);
-        }
-
-        const flag=topFinal.as<=asMax&&botR.as<=asMax?'PASS':'FAIL';
-        const name=isG?`G${gi++}-1`:`B${bi++}-1`;
-
+        let b=300,h=600;
+        if(sec){b=sec.b;h=sec.h;}
+        else{const dm=grp.section.match(/(\d+)[xX×](\d+)/);if(dm){b=+dm[1]*10;h=+dm[2]*10;}}
+        const d=h-cfg.cov-cfg.swD-dBaseMax/2;
+        const asMin=Math.max(0.25*Math.sqrt(cfg.fc)/cfg.fy*b*d, 1.4/cfg.fy*b*d);
+        const asMax=0.025*b*d;
+        const isG=grp.section.match(/^(G|TG)/i);
+        const dAdd=isG?dAddG:dAddB;
+        const asTopReq=Math.max(grp.asTopMax,asMin);
+        const asBotReq=Math.max(grp.asBotMax,asMin);
+        const topR=pickRebar(asTopReq,asMax,cfg.diams,dBaseMax,dAdd,cfg.cov,cfg.swD,b);
+        let botR=pickRebar(asBotReq,asMax,cfg.diams,dBaseMax,dBaseMax,cfg.cov,cfg.swD,b);
+        // SNI 18.6.3.1: As_top >= As_bot/4
+        if(topR.as<botR.as/4){const r2=pickRebar(botR.as/4,asMax,cfg.diams,dBaseMax,dAdd,cfg.cov,cfg.swD,b);if(r2.as>=botR.as/4)Object.assign(topR,r2);}
+        const flag=topR.as<=asMax*1.05&&botR.as<=asMax*1.05?'PASS':'FAIL';
+        const nm=(isG?`G${gi++}`:isG===null?`B${bi++}`:`B${bi++}`)+'-'+grp.story;
         flexResult.push({
-          name, section:grp.section, b, h, d,
-          topLabel:rebarLabel(topFinal.nb,topFinal.db,topFinal.na,topFinal.da),
+          name:nm,story:grp.story,section:grp.section,b,h,d:Math.round(d),
+          topLabel:rebarLabel(topR.nb,topR.db,topR.na,topR.da),
           botLabel:rebarLabel(botR.nb,botR.db,botR.na,botR.da),
-          asTop:Math.round(topFinal.as), asBot:Math.round(botR.as),
-          asTopReq:Math.round(asTopReq), asBotReq:Math.round(asBotReq),
-          flag
+          asTop:Math.round(topR.as),asBot:Math.round(botR.as),
+          asTopReq:Math.round(asTopReq),asBotReq:Math.round(asBotReq),
+          asMin:Math.round(asMin),asMax:Math.round(asMax),flag
         });
       }
-
-      bar.style.width='100%'; msg.textContent='Selesai!';
-      setTimeout(()=>showFlexResult(),400);
-    }catch(err){
-      document.getElementById('fp-msg').textContent='Error: '+err.message;
-    }
+      document.getElementById('fp-bar').style.width='100%';
+      document.getElementById('fp-msg').textContent='Selesai!';
+      setTimeout(()=>{
+        document.getElementById('flex-prog').style.display='none';
+        document.getElementById('flex-result').style.display='block';
+        renderFlexResult();
+      },300);
+    }catch(err){document.getElementById('fp-msg').textContent='Error: '+err.message;}
   },200);
 }
 
-function showFlexResult(){
-  document.getElementById('flex-prog').style.display='none';
-  document.getElementById('flex-result').style.display='block';
-  const pass=flexResult.filter(r=>r.flag==='PASS').length;
-  const fail=flexResult.length-pass;
-  document.getElementById('flex-summary').textContent=`✓ ${flexResult.length} group selesai — PASS: ${pass} | FAIL: ${fail}`;
-  if(fail>0)document.getElementById('flex-summary').className='info ir';
-  const tbody=document.getElementById('tbody-flex');
-  tbody.innerHTML=flexResult.map(r=>`
-    <tr>
-      <td style="font-weight:700;color:var(--b1)">${r.name}</td>
-      <td>${r.section}</td>
-      <td class="mono">${r.b}×${r.h}</td>
-      <td class="mono">${r.topLabel}</td>
-      <td class="mono">${r.botLabel}</td>
-      <td class="mono">${r.asTop}</td>
-      <td class="mono">${r.asBot}</td>
-      <td><span class="${r.flag==='PASS'?'fp':'ff'}">${r.flag}</span></td>
-    </tr>`).join('');
+function renderFlexResult(){
+  const stF=document.getElementById('flex-story-filter').value;
+  const seF=document.getElementById('flex-sec-filter').value.toLowerCase();
+  const flF=document.getElementById('flex-flag-filter').value;
+  const rows=flexResult.filter(r=>
+    (!stF||r.story===stF)&&(!seF||r.section.toLowerCase().includes(seF))&&(!flF||r.flag===flF));
+  const pass=rows.filter(r=>r.flag==='PASS').length;
+  const fail=rows.length-pass;
+  const sm=document.getElementById('flex-summary');
+  sm.textContent=`${rows.length}/${flexResult.length} group · PASS: ${pass} · FAIL: ${fail}`;
+  sm.className=fail>0?'info ir':'info ig';
+  // Stats
+  const stAll=[...new Set(flexResult.map(r=>r.story))];
+  document.getElementById('flex-stats').innerHTML=
+    `<div class="stbox"><div class="stk">Total Group</div><div class="stv">${flexResult.length}</div></div>
+     <div class="stbox"><div class="stk">Lantai</div><div class="stv">${stAll.length}</div></div>
+     <div class="stbox"><div class="stk" style="color:var(--green)">PASS</div><div class="stv" style="color:var(--green)">${flexResult.filter(r=>r.flag==='PASS').length}</div></div>
+     <div class="stbox"><div class="stk" style="color:var(--red)">FAIL</div><div class="stv" style="color:var(--red)">${flexResult.filter(r=>r.flag==='FAIL').length}</div></div>`;
+  document.getElementById('tbody-flex').innerHTML=rows.map(r=>`<tr>
+    <td><span class="ztag">${r.story}</span></td><td>${r.section}</td>
+    <td class="mono">${r.b}×${r.h}</td><td class="mono">${r.topLabel}</td><td class="mono">${r.botLabel}</td>
+    <td class="mono">${r.asTop}</td><td class="mono">${r.asBot}</td>
+    <td><span class="${r.flag==='PASS'?'fp':'ff'}">${r.flag}</span></td></tr>`).join('');
 }
 
-function dlE2K(){
-  // generate E2K update section text
-  let out='$ SECTION UPDATE — SJK-ETABSRebarPro\n$ Tulangan Longitudinal M3\n\n';
-  for(const r of flexResult){
-    out+=`$ ${r.name} — ${r.section} (${r.b}×${r.h}mm)\n`;
-    out+=`$ Tul Atas: ${r.topLabel} (As=${r.asTop}mm²) | Tul Bawah: ${r.botLabel} (As=${r.asBot}mm²)\n`;
-    out+=`FRAMESECTION NAME="${r.section}" REBAR3I="${r.asTop}" REBAR3J="${r.asTop}" REBAR2="${r.asBot}"\n\n`;
-  }
-  dlText(out, 'SJK_E2K_flex_rebar_v1.e2k');
-}
-
-/* ══ SHEAR PARSER ══ */
+/* ═══ EXCEL PARSER (Shear) ═══ */
 function trigShear(){document.getElementById('fi-shear').click();}
 function readShear(inp){if(inp.files[0])parseShear(inp.files[0]);}
 
 function parseShear(file){
   const drop=document.getElementById('drop-shear');
   drop.innerHTML='<div class="di">⏳</div><div style="color:var(--b1)">Mem-parse Shear Excel...</div>';
-  const reader=new FileReader();
-  reader.onload=e=>{
-    try{
-      const wb=XLSX.read(e.target.result,{type:'array'});
-      const ws=wb.Sheets[wb.SheetNames[0]];
-      const raw=XLSX.utils.sheet_to_json(ws,{defval:''});
-      shearData=[];
-      for(const row of raw){
-        const get=(pat)=>{const k=Object.keys(row).find(k=>k.toLowerCase().replace(/\s+/g,'').replace(/[()²/]/g,'').includes(pat));return k?row[k]:undefined;};
-        const story=String(get('story')||'').trim();
-        const label=String(get('label')||'').trim();
-        const section=String(get('section')||'').trim();
-        const loc=String(get('location')||'').trim();
-        const vu=parseFloat(get('shearforce')||get('vu')||0)||0;
-        const avs=parseFloat(get('vrebarav')||get('avsrebar')||get('vrebar')||0)||0;
-        if(!story||!label||!section)continue;
-        if(/^(BB|KB)/i.test(section))continue;
-        shearData.push({story,label,section,location:loc,vu:Math.abs(vu),avs});
-      }
-      if(!shearData.length)throw new Error('Tidak ada data valid. Periksa format kolom Excel.');
-      drop.innerHTML=`<div class="di">✅</div><div style="color:var(--green);font-weight:600">${file.name}</div><div style="font-size:10px;color:var(--g3);margin-top:3px">${shearData.length} baris valid terbaca</div>`;
-      document.getElementById('shear-parse-info').style.display='block';
-      document.getElementById('shear-parse-info').innerHTML=`<div class="info ig">✓ ${shearData.length} baris Shear Envelope berhasil dibaca.</div>`;
-      document.getElementById('shear-engine-wrap').style.display='block';
-    }catch(err){
-      drop.innerHTML=`<div class="di">❌</div><div style="color:var(--red)">${err.message}</div>`;
+  parseETABSExcel(file,(headers,rows,fname,err)=>{
+    if(err){drop.innerHTML=`<div class="di">❌</div><div style="color:var(--red)">${err}</div>`;return;}
+    const ci={
+      story: colFind(headers,'story'),
+      label: colFind(headers,'label'),
+      section: colFind(headers,'section','sect'),
+      location: colFind(headers,'location','loc'),
+      vu: colFind(headers,'shearforce','shearvu','vu','force'),
+      avs: colFind(headers,'vrebar','avsrebar','avs','reinf','avovesr'),
+    };
+    shearData=[];
+    for(const row of rows){
+      if(!row||!row.length||!row[ci.story]) continue;
+      const story=String(row[ci.story]).trim();
+      const section=String(row[ci.section]??'').trim();
+      if(!story||!section||/^(BB|KB)/i.test(section)) continue;
+      const vu=Math.abs(parseFloat(row[ci.vu]??0)||0);
+      let avs=parseFloat(row[ci.avs]??0)||0;
+      // ETABS: VRebar Av/s dalam m²/m → konversi ke mm²/mm (=mm²/mm × 1e3 → mm²/m)
+      // kalau nilai sangat kecil (< 0.01) berarti masih m²/m, konversi
+      // mm²/m yang wajar untuk balok: 200–2000
+      if(avs>0&&avs<0.5) avs=avs*1e6; // m²/m → mm²/m (×1e6/1000 = ×1000... sebenarnya: m²/m × 10⁶ mm²/m² / 1000mm/m = ×1000)
+      else if(avs>0&&avs<50) avs=avs*1000; // kemungkinan dalam m²/m sudah ×1000
+      shearData.push({story,label:String(row[ci.label]??'').trim(),section,
+        location:String(row[ci.location]??'').trim(),vu,avs});
     }
-  };
-  reader.readAsArrayBuffer(file);
+    if(!shearData.length){
+      drop.innerHTML=`<div class="di">❌</div><div style="color:var(--red)">Tidak ada data valid.</div>`;return;
+    }
+    const stories=[...new Set(shearData.map(r=>r.story))];
+    const sf=document.getElementById('shear-story-filter');
+    sf.innerHTML='<option value="">Semua</option>'+stories.map(s=>`<option>${s}</option>`).join('');
+    drop.innerHTML=`<div class="di">✅</div><div style="color:var(--green);font-weight:600">${fname}</div>
+      <div style="font-size:10px;color:var(--g3);margin-top:3px">${shearData.length} baris · ${stories.length} lantai</div>`;
+    document.getElementById('shear-parse-info').style.display='block';
+    document.getElementById('shear-parse-info').innerHTML=
+      `<div class="info ig">✓ ${shearData.length} baris Shear Envelope berhasil dibaca.</div>`;
+    document.getElementById('shear-engine-wrap').style.display='block';
+  });
 }
 
-/* ══ ENGINE M4 (SENGKANG) ══ */
+/* ═══ ENGINE SENGKANG ═══ */
 function runShear(){
   cfg=getCfg();
   document.getElementById('shear-prog').style.display='block';
   document.getElementById('btn-run-shear').disabled=true;
-
+  document.getElementById('sp-msg').textContent='Grouping...';
   setTimeout(()=>{
     try{
-      const bar=document.getElementById('sp-bar'),msg=document.getElementById('sp-msg');
-      bar.style.width='30%'; msg.textContent='Grouping shear data...';
-
-      // group by section
-      const groups={};
+      const dBaseMax=parseInt(document.getElementById('dbase').value.replace('D',''));
+      const grpMap={};
       for(const row of shearData){
-        if(!groups[row.section])groups[row.section]={section:row.section,avsTumpMax:0,vuMidMax:0};
-        const isMid=row.location.toLowerCase().includes('mid');
-        const isTump=!isMid;
-        if(isTump)groups[row.section].avsTumpMax=Math.max(groups[row.section].avsTumpMax,row.avs);
-        if(isMid)groups[row.section].vuMidMax=Math.max(groups[row.section].vuMidMax,row.vu);
+        const k=row.story+'||'+row.section;
+        if(!grpMap[k]) grpMap[k]={story:row.story,section:row.section,avsTMax:0,vuMidMax:0};
+        const isT=!row.location.toLowerCase().match(/mid|span|center/);
+        if(isT) grpMap[k].avsTMax=Math.max(grpMap[k].avsTMax,row.avs);
+        else grpMap[k].vuMidMax=Math.max(grpMap[k].vuMidMax,row.vu);
       }
-
-      bar.style.width='70%'; msg.textContent='Menghitung sengkang...';
-
+      document.getElementById('sp-bar').style.width='60%';
       shearResult=[];
-      for(const [sec,grp] of Object.entries(groups)){
-        const secD=e2kData.sections[sec];
-        const b=secD?secD.b:parseInt(sec.match(/\d+/)?.[0]||300);
-        const h=secD?secD.h:parseInt(sec.match(/\d+.*?(\d+)/)?.[1]||600);
-        const dSwD=cfg.swD;
-        const dBaseMax=parseInt(document.getElementById('dbase').value.replace('D',''));
-        const d=h-cfg.cov-dSwD-dBaseMax/2;
-
-        // Tumpuan: Vc=0 (zona gempa SRPMK), pakai VRebar Av/s langsung
-        const avsT=grp.avsTumpMax; // mm²/m
-        // Av per kaki D10
-        const Av1=DB[dSwD]; // mm²
-        // kaki: 2 atau 4
+      for(const [,grp] of Object.entries(grpMap)){
+        const sec=e2kData.sections[grp.section];
+        let b=300,h=600;
+        if(sec){b=sec.b;h=sec.h;}
+        else{const dm=grp.section.match(/(\d+)[xX×](\d+)/);if(dm){b=+dm[1]*10;h=+dm[2]*10;}}
+        const d=h-cfg.cov-cfg.swD-dBaseMax/2;
+        const Av1=DB[cfg.swD];
         const nKaki=b>cfg.leg4?4:2;
-        const AvTotal=Av1*nKaki; // mm² per sengkang
-
-        let sTump=cfg.swTump; // fixed tumpuan
-        // cek: apakah AvTotal/sTump >= avs/1000
-        const avsCheck=AvTotal/sTump*1000; // mm²/m
-        let nKakiT=nKaki;
-        if(avsT>0&&avsCheck<avsT){
-          // tambah kaki
-          nKakiT=Math.ceil(avsT*sTump/1000/Av1);
-          nKakiT=Math.max(nKakiT,2);
+        const AvTot=Av1*nKaki;
+        // Tumpuan: Vc=0 zona gempa
+        let sTump=cfg.swTump;
+        const avsT_mm=grp.avsTMax; // sudah dalam mm²/m
+        if(avsT_mm>0){
+          const needed=Math.ceil(AvTot/(avsT_mm/1000)); // s dalam mm
+          sTump=Math.min(sTump,Math.max(needed,cfg.swMin));
+          sTump=Math.floor(sTump/25)*25||cfg.swMin;
         }
-
-        // Lapangan: Vs = Vu/φ - Vc, φ=0.75
+        // Lapangan
         const phi=0.75;
         const Vc=0.17*cfg.lam*Math.sqrt(cfg.fc)*b*d/1000; // kN
-        const VuMid=grp.vuMidMax; // kN
-        const Vs=Math.max(VuMid/phi-Vc,0); // kN
-        const avsLap=Vs>0?(Vs*1000/(cfg.fy*d/1000))*1000:0; // mm²/m (konversi)
-        const avsLapFinal=Math.max(avsLap, 0.062*Math.sqrt(cfg.fc)*b/cfg.fy*1000, 0.35*b/cfg.fy*1000);
-
-        let sLap=avsLapFinal>0?Math.floor(AvTotal/avsLapFinal*1000):999;
-        // batas maks: d/2
-        sLap=Math.min(sLap, Math.floor(d/2));
-        // batas min
-        sLap=Math.max(sLap, cfg.swMin);
-        // bulatkan
-        sLap=Math.floor(sLap/cfg.swRnd)*cfg.swRnd;
-        if(sLap<cfg.swMin)sLap=cfg.swMin;
-
-        const tumpLabel=`D${dSwD}-${sTump} (${nKakiT} kaki)`;
-        const lapLabel=`D${dSwD}-${sLap} (${nKaki} kaki)`;
-        const flag=sLap>=cfg.swMin?'PASS':'FAIL';
-
-        // cari nama group dari flexResult
-        const fr=flexResult.find(r=>r.section===sec);
-        shearResult.push({
-          name:fr?fr.name:sec, section:sec, b, h,
-          tumpLabel, lapLabel, sTump, sLap, nKakiT, nKaki, flag
-        });
+        const Vs=Math.max(grp.vuMidMax/phi-Vc,0);
+        const avsLap=Vs>0?Vs*1000/(cfg.fy*d/1000):0; // mm²/m
+        const avsMin=Math.max(0.062*Math.sqrt(cfg.fc)*b/cfg.fy, 0.35*b/cfg.fy)*1000;
+        const avsFinal=Math.max(avsLap,avsMin);
+        let sLap=avsFinal>0?Math.floor(AvTot/avsFinal*1000):d/2;
+        sLap=Math.min(sLap,Math.floor(d/2));sLap=Math.max(sLap,cfg.swMin);
+        sLap=Math.floor(sLap/cfg.swRnd)*cfg.swRnd||cfg.swMin;
+        const flag=sLap>=cfg.swMin&&sTump>=cfg.swMin?'PASS':'FAIL';
+        shearResult.push({story:grp.story,section:grp.section,b,h,
+          tumpLabel:`D${cfg.swD}-${sTump} (${nKaki} kaki)`,
+          lapLabel:`D${cfg.swD}-${sLap} (${nKaki} kaki)`,flag});
       }
-
-      bar.style.width='100%'; msg.textContent='Selesai!';
-      setTimeout(()=>showShearResult(),400);
-    }catch(err){
-      document.getElementById('sp-msg').textContent='Error: '+err.message;
-    }
+      document.getElementById('sp-bar').style.width='100%';
+      document.getElementById('sp-msg').textContent='Selesai!';
+      setTimeout(()=>{
+        document.getElementById('shear-prog').style.display='none';
+        document.getElementById('shear-result').style.display='block';
+        renderShearResult();
+      },300);
+    }catch(err){document.getElementById('sp-msg').textContent='Error: '+err.message;}
   },200);
 }
 
-function showShearResult(){
-  document.getElementById('shear-prog').style.display='none';
-  document.getElementById('shear-result').style.display='block';
-  const pass=shearResult.filter(r=>r.flag==='PASS').length;
-  const fail=shearResult.length-pass;
-  document.getElementById('shear-summary').textContent=`✓ ${shearResult.length} group selesai — PASS: ${pass} | FAIL: ${fail}`;
-  if(fail>0)document.getElementById('shear-summary').className='info ir';
-  const tbody=document.getElementById('tbody-shear');
-  tbody.innerHTML=shearResult.map(r=>`
-    <tr>
-      <td style="font-weight:700;color:var(--b1)">${r.name}</td>
-      <td>${r.section}</td>
-      <td class="mono">${r.b}×${r.h}</td>
-      <td class="mono">${r.tumpLabel}</td>
-      <td class="mono">${r.lapLabel}</td>
-      <td><span class="${r.flag==='PASS'?'fp':'ff'}">${r.flag}</span></td>
-    </tr>`).join('');
+function renderShearResult(){
+  const stF=document.getElementById('shear-story-filter').value;
+  const seF=document.getElementById('shear-sec-filter').value.toLowerCase();
+  const flF=document.getElementById('shear-flag-filter').value;
+  const rows=shearResult.filter(r=>
+    (!stF||r.story===stF)&&(!seF||r.section.toLowerCase().includes(seF))&&(!flF||r.flag===flF));
+  const pass=rows.filter(r=>r.flag==='PASS').length;
+  const sm=document.getElementById('shear-summary');
+  sm.textContent=`${rows.length}/${shearResult.length} group · PASS: ${pass} · FAIL: ${rows.length-pass}`;
+  sm.className=rows.length-pass>0?'info ir':'info ig';
+  document.getElementById('tbody-shear').innerHTML=rows.map(r=>`<tr>
+    <td><span class="ztag">${r.story}</span></td><td>${r.section}</td>
+    <td class="mono">${r.b}×${r.h}</td><td class="mono">${r.tumpLabel}</td>
+    <td class="mono">${r.lapLabel}</td><td><span class="${r.flag==='PASS'?'fp':'ff'}">${r.flag}</span></td></tr>`).join('');
 }
 
-/* ══ OUTPUT ══ */
+/* ═══ OUTPUT ═══ */
 function goOutput(){
-  unlock('output'); showTab('output');
+  unlock('output');showTab('output');
   const pnm=document.getElementById('pnm').value||'Project';
-  const pno=document.getElementById('pno').value;
-  const dt=new Date().toISOString().slice(0,10);
-  document.getElementById('save-name').textContent=`SJKRebarPro_${pno}_${pnm.replace(/\s+/g,'_')}_${dt}_WIB`;
-  const files=[
-    {icon:'📗',name:`SJK_Penulangan_Balok_${pnm.replace(/\s+/g,'_')}.xlsx`,desc:'Semua tipe tulangan + SUMMARY',fn:'dlExcel'},
-    {icon:'📄',name:`SJK_Laporan_Ringkas_${pnm.replace(/\s+/g,'_')}.txt`,desc:'Ringkasan desain per group',fn:'dlLaporan'},
-    {icon:'📄',name:`SJK_E2K_Final_${pnm.replace(/\s+/g,'_')}.e2k`,desc:'File E2K final dengan tulangan lengkap',fn:'dlE2KFinal'},
-  ];
-  document.getElementById('out-files').innerHTML=files.map(f=>`
-    <div class="frow"><span style="font-size:18px">${f.icon}</span>
-    <div style="flex:1"><div class="mono" style="font-size:12px">${f.name}</div><div style="font-size:10px;color:var(--g3)">${f.desc}</div></div>
-    <button class="bp" style="padding:5px 10px;font-size:11px" onclick="${f.fn}()">⬇️</button></div>`).join('');
+  document.getElementById('save-name').textContent=`SJKRebarPro_${pnm.replace(/\s+/g,'_')}_${new Date().toISOString().slice(0,10)}`;
+  document.getElementById('out-files').innerHTML=[
+    {icon:'📄',name:'SJK_Penulangan_Longitudinal.txt',fn:'dlFlex'},
+    {icon:'📄',name:'SJK_Penulangan_Sengkang.txt',fn:'dlShear'},
+    {icon:'📄',name:'SJK_Laporan_Ringkas.txt',fn:'dlLaporan'},
+    {icon:'📁',name:'SJK_E2K_Final.e2k',fn:'dlE2KFinal'},
+  ].map(f=>`<div class="frow"><span style="font-size:18px">${f.icon}</span>
+    <div style="flex:1;font-family:monospace;font-size:12px">${f.name}</div>
+    <button class="bp" style="padding:4px 10px;font-size:11px" onclick="${f.fn}()">⬇️</button></div>`).join('');
 }
-
-function dlExcel(){
-  let txt='SJK-ETABSRebarPro — Hasil Penulangan Balok\n';
-  txt+='='+'='.repeat(80)+'\n\n';
-  txt+='TULANGAN LONGITUDINAL\n'+'-'.repeat(50)+'\n';
-  txt+='Group\tSection\tb×h\tTul.Atas\tTul.Bawah\tAs.Top\tAs.Bot\tFlag\n';
-  for(const r of flexResult)txt+=`${r.name}\t${r.section}\t${r.b}×${r.h}\t${r.topLabel}\t${r.botLabel}\t${r.asTop}\t${r.asBot}\t${r.flag}\n`;
-  txt+='\nSENGKANG\n'+'-'.repeat(50)+'\n';
-  txt+='Group\tSection\tb×h\tTumpuan\tLapangan\tFlag\n';
-  for(const r of shearResult)txt+=`${r.name}\t${r.section}\t${r.b}×${r.h}\t${r.tumpLabel}\t${r.lapLabel}\t${r.flag}\n`;
-  dlText(txt,'SJK_Penulangan_Balok.txt');
+function dlFlex(){
+  let t='TULANGAN LONGITUDINAL — SJK-ETABSRebarPro\n'+nowStr()+'\n\n';
+  const sts=[...new Set(flexResult.map(r=>r.story))];
+  for(const s of sts){
+    t+=`\n=== ${s} ===\nSection\tb×h\tTul.Atas\tTul.Bawah\tAs.Top\tAs.Bot\tStatus\n`;
+    flexResult.filter(r=>r.story===s).forEach(r=>
+      t+=`${r.section}\t${r.b}×${r.h}\t${r.topLabel}\t${r.botLabel}\t${r.asTop}\t${r.asBot}\t${r.flag}\n`);
+  }
+  dlText(t,'SJK_Penulangan_Longitudinal.txt');
+}
+function dlShear(){
+  let t='SENGKANG — SJK-ETABSRebarPro\n'+nowStr()+'\n\n';
+  const sts=[...new Set(shearResult.map(r=>r.story))];
+  for(const s of sts){
+    t+=`\n=== ${s} ===\nSection\tb×h\tTumpuan\tLapangan\tStatus\n`;
+    shearResult.filter(r=>r.story===s).forEach(r=>
+      t+=`${r.section}\t${r.b}×${r.h}\t${r.tumpLabel}\t${r.lapLabel}\t${r.flag}\n`);
+  }
+  dlText(t,'SJK_Penulangan_Sengkang.txt');
 }
 function dlLaporan(){
   const pnm=document.getElementById('pnm').value||'Project';
-  let txt=`LAPORAN RINGKAS DESAIN TULANGAN BALOK\nPT Struclab Jaya Konsultindo — SJK-ETABSRebarPro\n`;
-  txt+=`Project: ${pnm}\nTanggal: ${now()}\nfc'=${cfg.fc}MPa | fy=${cfg.fy}MPa | Cover=${cfg.cov}mm\n\n`;
-  const fail=flexResult.filter(r=>r.flag==='FAIL').concat(shearResult.filter(r=>r.flag==='FAIL'));
-  txt+=fail.length?`⚠️ ${fail.length} FAIL ditemukan:\n${fail.map(r=>r.name).join(', ')}\n\n`:`✓ Semua group PASS\n\n`;
-  txt+='TULANGAN LONGITUDINAL\n';
-  for(const r of flexResult)txt+=`  ${r.name} (${r.section} ${r.b}×${r.h}): Atas=${r.topLabel} | Bawah=${r.botLabel} [${r.flag}]\n`;
-  txt+='\nSENGKANG\n';
-  for(const r of shearResult)txt+=`  ${r.name} (${r.section} ${r.b}×${r.h}): Tump=${r.tumpLabel} | Lap=${r.lapLabel} [${r.flag}]\n`;
-  dlText(txt,'SJK_Laporan_Ringkas.txt');
+  const fails=[...flexResult,...shearResult].filter(r=>r.flag==='FAIL');
+  let t=`LAPORAN RINGKAS — PT Struclab Jaya Konsultindo\nProject: ${pnm}\n${nowStr()}\nfc'=${cfg.fc}MPa | fy=${cfg.fy}MPa\n\n`;
+  t+=fails.length?`⚠️ ${fails.length} FAIL:\n${fails.map(r=>r.section+'['+r.story+']').join(', ')}\n\n`:'✓ Semua PASS\n\n';
+  dlText(t,'SJK_Laporan_Ringkas.txt');
+}
+function dlE2K(){
+  let o=`$ SJK-ETABSRebarPro v2 — E2K Update Longitudinal\n$ ${nowStr()}\n\n`;
+  for(const r of flexResult){
+    const at=(r.asTop/1e6).toFixed(7),ab=(r.asBot/1e6).toFixed(7);
+    o+=`$ ${r.section} [${r.story}] — Atas:${r.topLabel} Bawah:${r.botLabel}\n`;
+    o+=`FRAMESECTION "${r.section}" REBAR3I "${at}" REBAR3J "${at}" REBAR2 "${ab}"\n\n`;
+  }
+  dlText(o,'SJK_E2K_flex_rebar_v1.e2k');
 }
 function dlE2KFinal(){
-  let out='$ SECTION UPDATE FINAL — SJK-ETABSRebarPro\n$ Tulangan Longitudinal + Sengkang\n\n';
+  let o=`$ SJK-ETABSRebarPro v2 — E2K Final\n$ ${nowStr()}\n\n`;
   for(const r of flexResult){
-    const sw=shearResult.find(s=>s.section===r.section);
-    out+=`$ ${r.name} — ${r.section}\n`;
-    out+=`$ Long: Atas=${r.topLabel} | Bawah=${r.botLabel}\n`;
-    if(sw)out+=`$ Shear: Tump=${sw.tumpLabel} | Lap=${sw.lapLabel}\n`;
-    out+=`FRAMESECTION NAME="${r.section}" REBAR3I="${r.asTop}" REBAR3J="${r.asTop}" REBAR2="${r.asBot}"\n\n`;
+    const sw=shearResult.find(s=>s.section===r.section&&s.story===r.story);
+    const at=(r.asTop/1e6).toFixed(7),ab=(r.asBot/1e6).toFixed(7);
+    o+=`$ ${r.section} [${r.story}]\n$ Long: Atas=${r.topLabel} Bawah=${r.botLabel}\n`;
+    if(sw) o+=`$ Shear: Tump=${sw.tumpLabel} Lap=${sw.lapLabel}\n`;
+    o+=`FRAMESECTION "${r.section}" REBAR3I "${at}" REBAR3J "${at}" REBAR2 "${ab}"\n\n`;
   }
-  dlText(out,'SJK_E2K_Final.e2k');
+  dlText(o,'SJK_E2K_Final.e2k');
 }
-function dlAll(){dlExcel();setTimeout(()=>dlLaporan(),300);setTimeout(()=>dlE2KFinal(),600);}
-
-function dlText(content,fname){
-  const a=document.createElement('a');
-  a.href='data:text/plain;charset=utf-8,'+encodeURIComponent(content);
-  a.download=fname; a.click();
-}
+function dlAll(){dlFlex();setTimeout(dlShear,200);setTimeout(dlLaporan,400);setTimeout(dlE2KFinal,600);}
+function dlText(c,f){const a=document.createElement('a');a.href='data:text/plain;charset=utf-8,'+encodeURIComponent(c);a.download=f;a.click();}
 function saveProj(){
-  document.getElementById('btn-save').textContent='✓ Project Tersimpan';
+  document.getElementById('btn-save').textContent='✓ Tersimpan';
   document.getElementById('btn-save').className='bg';
   document.getElementById('save-ok').style.display='block';
-  document.getElementById('save-ok').textContent='Project dapat di-recall dari "Buka Project Lama"';
+  document.getElementById('save-ok').textContent='Project berhasil disimpan.';
 }
+function goShear(){unlock('shear');showTab('shear');}
 
-/* ══ SNI DATA ══ */
+/* ═══ SNI ═══ */
 const SNIDATA={
   s1:{code:'SNI 2847:2019',sub:'Persyaratan Beton Struktural untuk Bangunan Gedung',color:'#1958A5',items:[
-    {ps:'9.6.1.2',t:'As minimum balok',f:'As_min = max(0.25√fc/fy·bw·d, 1.4/fy·bw·d)',n:'Berlaku semua balok lentur'},
-    {ps:'9.3.3.1',t:'As maksimum SRPMK',f:'As_max = 0.025·bw·d',n:'Batas atas tulangan tarik'},
-    {ps:'18.6.3.1',t:'As min tumpuan SRPMK',f:'As_tump ≥ max(As_min, As_lap/4)',n:'Khusus balok SRPMK'},
-    {ps:'18.6.4.1',t:'Zona sengkang gempa',f:'L = max(2h, ln/4, 500mm) dari muka kolom',n:'Sengkang rapat di zona ini'},
-    {ps:'18.6.4.4',t:'Spasi sengkang tumpuan',f:'s ≤ min(d/4, 6·db, 150mm)',n:'Di zona 2h dari muka kolom'},
-    {ps:'18.7.3',t:'SCWB',f:'ΣMnc ≥ (6/5)·ΣMnb',n:'Kuat kolom > kuat balok'},
-    {ps:'22.5.5.1',t:'Kuat geser Vc',f:'Vc = 0.17·λ·√fc·bw·d (=0 zona SRPMK)',n:'Vc=0 untuk zona sengkang gempa'},
-    {ps:'22.5.8.5',t:'Kuat geser sengkang Vs',f:'Vs = Av·fy·d / s',n:'Av = luas total kaki sengkang'},
-    {ps:'25.2.1',t:'Jarak bersih tulangan',f:'s_bersih ≥ max(25mm, db, 4/3·agg_max)',n:'Antar sisi terluar batang'},
-    {ps:'20.2.2.4',t:'Faktor φ',f:'φ lentur=0.90 | φ geser=0.75 | φ tekan=0.65',n:'Digunakan engine SJKRebarPro'},
+    {ps:'9.6.1.2',t:'As minimum balok',f:'As_min = max(0.25√fc/fy·bw·d, 1.4/fy·bw·d)'},
+    {ps:'9.3.3.1',t:'As maksimum SRPMK',f:'As_max = 0.025·bw·d'},
+    {ps:'18.6.3.1',t:'As min tumpuan SRPMK',f:'As_tump ≥ max(As_min, As_lap/4)'},
+    {ps:'18.6.4.4',t:'Spasi sengkang tumpuan',f:'s ≤ min(d/4, 6·db, 150mm)'},
+    {ps:'22.5.5.1',t:'Kuat geser Vc',f:'Vc = 0.17·λ·√fc·bw·d (=0 zona SRPMK)'},
+    {ps:'22.5.8.5',t:'Kuat geser sengkang Vs',f:'Vs = Av·fy·d / s'},
+    {ps:'25.2.1',t:'Jarak bersih tulangan',f:'s ≥ max(25mm, db, 4/3·agg_max)'},
+    {ps:'20.2.2.4',t:'Faktor φ',f:'φ lentur=0.90 | φ geser=0.75 | φ tekan=0.65'},
   ]},
   s2:{code:'SNI 1726:2019',sub:'Tata Cara Perencanaan Ketahanan Gempa',color:'#B45309',items:[
-    {ps:'6.2',t:'Kategori Risiko',f:'KR I–IV berdasarkan fungsi bangunan',n:'KR IV = fasilitas esensial'},
-    {ps:'7.3',t:'Kategori Desain Seismik',f:'KDS A–F dari SDS, SD1, dan KR',n:'KDS D/E/F → wajib SRPMK'},
-    {ps:'7.5.1',t:'Parameter SRPMK',f:'R=8 | Ω₀=3 | Cd=5.5',n:'Untuk KDS D, E, F'},
-    {ps:'Ps.14',t:'Detail beton SRPMK',f:'Mengacu SNI 2847:2019 Pasal 18',n:'Harus dipenuhi KDS ≥ D'},
+    {ps:'7.3',t:'Kategori Desain Seismik',f:'KDS A–F dari SDS, SD1, KR'},
+    {ps:'7.5.1',t:'Parameter SRPMK',f:'R=8 | Ω₀=3 | Cd=5.5'},
   ]},
   s3:{code:'SNI 1727:2020',sub:'Beban Desain Minimum untuk Bangunan Gedung',color:'#166534',items:[
-    {ps:'3',t:'Beban mati (D)',f:'Berat sendiri + komponen permanen',n:'Dari berat satuan material'},
-    {ps:'4.3.2',t:'Beban hidup lantai',f:'Kantor=2.40 | Apartemen=1.92 | Parkir=2.40 kN/m²',n:'Nilai minimum SNI'},
-    {ps:'2.3.1',t:'Kombinasi LRFD',f:'1.4D | 1.2D+1.6L | 1.2D+1.0E+L | 0.9D+1.0E',n:'Ambil efek terbesar'},
+    {ps:'4.3.2',t:'Beban hidup lantai',f:'Kantor=2.40 | Apartemen=1.92 | Parkir=2.40 kN/m²'},
+    {ps:'2.3.1',t:'Kombinasi LRFD',f:'1.4D | 1.2D+1.6L | 1.2D+1.0E+L | 0.9D+1.0E'},
   ]},
 };
 let curSNI='s1';
 function setSNI(id){
-  curSNI=id;
-  const d=SNIDATA[id];
+  curSNI=id;const d=SNIDATA[id];
   ['s1','s2','s3'].forEach((k,i)=>{
-    const b=document.getElementById('sb'+(i+1));
-    const c=SNIDATA[k].color;
-    if(k===id){b.style.borderColor=c;b.style.background=c+'15';b.style.color=c;}
-    else{b.style.borderColor='var(--b4)';b.style.background='#fff';b.style.color='var(--g3)';}
+    const b=document.getElementById('sb'+(i+1));const c=SNIDATA[k].color;
+    b.style.borderColor=k===id?c:'var(--b4)';b.style.background=k===id?c+'15':'#fff';b.style.color=k===id?c:'var(--g3)';
   });
-  document.getElementById('sni-code').textContent=d.code;
-  document.getElementById('sni-code').style.color=d.color;
-  document.getElementById('sni-hdr').style.background=d.color+'10';
-  document.getElementById('sni-hdr').style.borderColor=d.color+'30';
-  document.getElementById('sni-sub').textContent=d.sub;
-  document.getElementById('sni-q').value='';
-  fSNI();
+  document.getElementById('sni-code').textContent=d.code;document.getElementById('sni-code').style.color=d.color;
+  document.getElementById('sni-hdr').style.background=d.color+'10';document.getElementById('sni-hdr').style.borderColor=d.color+'30';
+  document.getElementById('sni-sub').textContent=d.sub;document.getElementById('sni-q').value='';fSNI();
 }
 function fSNI(){renderSNI(document.getElementById('sni-q').value);}
 function renderSNI(q){
   const d=SNIDATA[curSNI];
-  const items=d.items.filter(p=>!q||p.ps.includes(q)||p.t.toLowerCase().includes(q.toLowerCase())||p.f.toLowerCase().includes(q.toLowerCase()));
-  const cont=document.getElementById('sni-list');
-  if(!items.length){cont.innerHTML=`<div style="text-align:center;color:var(--g4);padding:32px;font-size:12px">Tidak ditemukan untuk "${q}"</div>`;return;}
-  cont.innerHTML=items.map(p=>`<div style="background:#fff;border:1px solid var(--b4);border-radius:9px;padding:12px 14px;margin-bottom:8px;border-left:3px solid ${d.color}">
-    <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-      <span style="font-family:monospace;font-size:10px;font-weight:700;padding:2px 6px;border-radius:5px;background:${d.color}15;color:${d.color}">Ps. ${p.ps}</span>
-      <span style="font-size:12px;font-weight:600;color:var(--dark)">${p.t}</span>
-    </div>
-    <div style="font-family:monospace;font-size:11px;color:var(--b1);background:var(--b5);padding:6px 10px;border-radius:5px;margin-bottom:4px">${p.f}</div>
-    <div style="font-size:10px;color:var(--g3)">📌 ${p.n}</div>
-  </div>`).join('');
+  const items=d.items.filter(p=>!q||p.ps.includes(q)||p.t.toLowerCase().includes(q.toLowerCase()));
+  document.getElementById('sni-list').innerHTML=items.map(p=>`
+    <div style="background:#fff;border:1px solid var(--b4);border-radius:9px;padding:12px 14px;margin-bottom:8px;border-left:3px solid ${d.color}">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+        <span style="font-family:monospace;font-size:10px;font-weight:700;padding:2px 6px;border-radius:5px;background:${d.color}15;color:${d.color}">Ps. ${p.ps}</span>
+        <span style="font-size:12px;font-weight:600;color:var(--dark)">${p.t}</span>
+      </div>
+      <div style="font-family:monospace;font-size:11px;color:var(--b1);background:var(--b5);padding:6px 10px;border-radius:5px">${p.f}</div>
+    </div>`).join('')||'<div style="text-align:center;color:var(--g4);padding:24px">Tidak ditemukan.</div>';
 }
 renderSNI('');
-
-/* init */
 updZones(1);
 </script>
 </body>
